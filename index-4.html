@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f0e7">
+<title>My Rome Your Home | Edoardo’s Guest Guide</title>
+<meta name="description" content="Private digital concierge for guests of My Rome Your Home in Trevi, Rome.">
+<style>
+:root{--ivory:#f5f0e7;--paper:#fffdf8;--ink:#211d19;--muted:#70685f;--line:#ded5c8;--brass:#9b7740;--dark:#25211d;--radius:22px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+a{color:inherit}.wrap{width:min(920px,100%);margin:auto;padding:18px 16px 54px}.serif{font-family:Georgia,"Times New Roman",serif}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);font-weight:700}
+.hero{padding:20px 0 24px;border-bottom:1px solid var(--line)}h1{font-size:clamp(42px,11vw,70px);line-height:.95;margin:12px 0 14px;font-weight:500}.lead{color:var(--muted);max-width:620px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:20px}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:11px 15px;border:1px solid var(--line);border-radius:14px;background:var(--paper);text-decoration:none;font-weight:700;cursor:pointer}.btn.primary{background:var(--dark);color:white;border-color:var(--dark)}
+nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:18px 0}.nav{min-height:68px;text-align:left;border:1px solid var(--line);border-radius:16px;background:var(--paper);padding:11px;cursor:pointer}.nav small{display:block;color:var(--muted);margin-top:2px}.nav.active{background:var(--dark);color:white}.nav.active small{color:#ddd4c8}
+.page{display:none}.page.active{display:block}.page h2{font:500 32px/1.1 Georgia,serif;margin:5px 0 16px}.stack>*+*{margin-top:12px}.muted{color:var(--muted)}.big{font:500 29px/1.15 Georgia,serif}.tag{font-size:11px;border:1px solid var(--line);padding:4px 8px;border-radius:999px}
+details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}.route{border-left:2px solid var(--line);padding-left:13px;margin-top:16px}.rule{display:flex;gap:10px;margin:10px 0}.dot{width:7px;height:7px;border-radius:50%;background:var(--brass);margin-top:9px;flex:0 0 auto}
+.notice{background:#eee5d7;border-radius:18px;padding:17px}.review{text-align:center;padding:28px}.stars{color:var(--brass);font-size:24px;letter-spacing:3px}
+footer{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+@media(max-width:680px){.wrap{padding:12px 12px 42px}.grid,.grid3{grid-template-columns:1fr}.grid.mobile2{grid-template-columns:repeat(2,minmax(0,1fr))}nav{grid-template-columns:repeat(2,minmax(0,1fr));position:sticky;top:0;z-index:5;background:rgba(245,240,231,.96);padding:10px 0;backdrop-filter:blur(8px)}.card{padding:17px}}
+</style>
+</head>
+<body>
+<main class="wrap" id="app">
+<header class="hero">
+<div class="eyebrow">Private digital concierge · Roma</div>
+<h1 class="serif">My Rome<br><em>Your Home</em></h1>
+<p class="lead">Welcome to my home in Rome’s historic centre. I put this guide together to make your stay easy — from arriving and getting around to my favourite places, practical tips and a few things I ask you to keep in mind while staying in my home.</p>
+<div class="card" style="margin-top:18px">
+<div class="eyebrow">Your address</div><div class="big" style="margin-top:5px">Vicolo Scanderbeg 43</div>
+<div class="muted">00187 Roma, Italy · Trevi</div>
+<div class="actions" style="margin-top:14px"><a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Vicolo+Scanderbeg+43+00187+Roma">Open in Google Maps</a><button class="btn" id="copy">Copy address</button></div>
+<div id="copied" class="muted" style="font-size:12px;margin-top:6px" aria-live="polite"></div>
+</div>
+</header>
+
+<nav aria-label="Guide sections">
+<button class="nav active" data-page="essentials"><b>✦ Essentials</b><small>Start here</small></button>
+<button class="nav" data-page="travel"><b>✈ Travel</b><small>Airports & port</small></button>
+<button class="nav" data-page="taxi"><b>🚕 Taxi</b><small>Book a ride</small></button>
+<button class="nav" data-page="house"><b>⌂ House Rules</b><small>Please read</small></button>
+<button class="nav" data-page="guides"><b>◇ Edoardo's Rome</b><small>Personal guides</small></button>
+<button class="nav" data-page="luggage"><b>▣ Luggage</b><small>Nearby storage</small></button>
+<button class="nav" data-page="rome"><b>◎ Rome & Vatican</b><small>Visitor essentials</small></button>
+<button class="nav" data-page="help"><b>☎ Help</b><small>Emergency & checkout</small></button>
+</nav>
+
+<section class="page active stack" id="essentials">
+<div><div class="eyebrow">Welcome to my home</div><h2>Make yourself at home in Trevi</h2></div>
+<div class="grid3">
+<div class="card"><div class="eyebrow">Check-in</div><div class="big">From 14:00</div><p class="muted">Bag drop may be possible from 11:30 during cleaning. Please return after 14:15 for the apartment.</p></div>
+<div class="card"><div class="eyebrow">Check-out</div><div class="big">By 11:00</div><p class="muted">For a later departure from Rome, see the luggage-storage section.</p></div>
+<div class="card"><div class="eyebrow">Your host</div><div class="big">Edoardo</div><p class="muted">For apartment assistance, please use the same messaging channel used for your reservation.</p></div>
+</div>
+<div class="card"><div class="eyebrow">Walkable Rome</div><div class="grid3 mobile2" style="margin-top:14px">
+<div><b>Trevi Fountain</b><br><span class="muted">≈ 1–2 min</span></div><div><b>Via del Corso</b><br><span class="muted">≈ 5 min</span></div><div><b>Barberini Metro A</b><br><span class="muted">≈ 7 min</span></div><div><b>Spanish Steps</b><br><span class="muted">≈ 10 min</span></div><div><b>Pantheon</b><br><span class="muted">≈ 12 min</span></div><div><b>Colosseum</b><br><span class="muted">≈ 20 min</span></div><div><b>Piazza Navona</b><br><span class="muted">≈ 12–18 min</span></div><div><b>St Peter\'s / Vatican</b><br><span class="muted">≈ 30–35 min walk</span></div>
+</div></div>
+<div class="card"><div class="eyebrow">About my home</div><div class="big">Quiet Trevi Fountain Apartment · Patio & Courtyard</div><p class="muted">My private home is tucked inside a peaceful 18th-century palazzo in Rione Trevi, around a one-minute walk from the Trevi Fountain. The entire ground-floor apartment is yours, with no stairs, windows facing the internal courtyard and no street noise.</p><div class="grid3 mobile2"><div><b>Up to 4 guests</b><br><span class="muted">1 bedroom · 2 beds</span></div><div><b>Private patio</b><br><span class="muted">Quiet courtyard setting</span></div><div><b>Ground floor</b><br><span class="muted">No stairs</span></div><div><b>King-size bed</b><br><span class="muted">+ 210 × 140 cm sofa bed</span></div><div><b>Family friendly</b><br><span class="muted">Crib + high chair</span></div><div><b>Pet friendly</b><br><span class="muted">Bowls + pet bed</span></div></div><p class="muted">Fast Wi-Fi · A/C · heating · 50&quot; Smart TV · Netflix · Prime Video · washing machine · dedicated workspace.</p></div><div class="notice"><div class="eyebrow">A note from your host</div><p class="big" style="margin:7px 0">Benvenuti a Roma.</p><span class="muted">I take great care of this home, and respectful travellers are always welcome. I hope you feel at home here and enjoy Rome as much as I do. — Edoardo</span></div>
+<div class="card review"><div class="stars">★★★★★</div><div class="big">Enjoying your stay?</div><p class="muted">If my home has made your time in Rome special, I’d be very grateful if you shared your experience. It helps future guests find my home.</p><a class="btn primary" target="_blank" rel="noopener" href="https://g.page/r/CS7Cc1gRHt3sEBI/review">Leave a Google review</a></div></section>
+
+<section class="page stack" id="travel">
+<div><div class="eyebrow">Door-to-door travel</div><h2>Airports, Termini & Civitavecchia</h2><p class="muted">Use official white taxis from designated ranks. Fixed fares are for eligible direct journeys between the listed airport/port and addresses within the Aurelian Walls.</p></div>
+<details class="card" open><summary><span class="tag">FCO</span> <b>Fiumicino · Leonardo da Vinci</b></summary>
+<div class="route"><b>FCO → apartment · easiest</b><p class="muted">Official white taxi: <b>€55 per vehicle</b> fixed fare to the Aurelian Walls.</p></div>
+<div class="route"><b>FCO → apartment · public transport</b><p class="muted">Leonardo Express to Roma Termini: <b>€14 · 32 minutes · non-stop</b>, normally every 15 minutes. From Termini take Metro A toward Battistini to Barberini, then walk about 7 minutes.</p></div>
+<div class="route"><b>Apartment → FCO</b><p class="muted">Official taxi: €55 fixed fare. Or Barberini → Metro A to Termini → Leonardo Express.</p></div>
+<div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.trenitalia.com/en/connections/leonardo-express.html">Leonardo Express</a></div>
+</details>
+<details class="card"><summary><span class="tag">CIA</span> <b>Ciampino · G.B. Pastine</b></summary>
+<div class="route"><b>CIA ↔ apartment</b><p class="muted">Official white taxi: <b>€40 per vehicle</b> fixed fare between Ciampino Airport and the Aurelian Walls.</p></div>
+<div class="route"><b>Budget option</b><p class="muted">Public buses connect the airport with Rome's transport network. With luggage, the official taxi is the simplest door-to-door option.</p></div>
+</details>
+<details class="card"><summary><span class="tag">CRUISE</span> <b>Civitavecchia Port</b></summary>
+<div class="route"><b>Port ↔ apartment</b><p class="muted">Official fixed taxi fare: <b>€150 per vehicle</b> between Civitavecchia Port and destinations within the Aurelian Walls.</p></div>
+<div class="route"><b>Best value</b><p class="muted">Reach Civitavecchia railway station and take a Trenitalia regional train into Rome, then continue by taxi or public transport. Leave generous time on embarkation days.</p></div>
+</details>
+<details class="card"><summary><span class="tag">TRAIN</span> <b>Roma Termini</b></summary><p class="muted">Take Metro A toward Battistini → Barberini, then walk to Vicolo Scanderbeg 43. Alternatively, use the official taxi rank outside Termini.</p></details>
+<div class="notice"><b>Airport safety</b><br><span class="muted">Do not accept unsolicited rides from people approaching you inside terminals. Follow signs to the official taxi rank.</span></div>
+</section>
+
+<section class="page stack" id="taxi">
+<div><div class="eyebrow">Taxi & rides</div><h2>Getting a car in Rome</h2><p class="muted">Pickup: <b>Vicolo Scanderbeg 43, 00187 Roma</b>.</p></div>
+<div class="grid">
+<div class="card"><div class="eyebrow">Rome city taxi</div><div class="big">ChiamaTaxi 060609</div><p class="muted">Request an official Rome taxi by phone.</p><a class="btn" href="tel:+39060609">Call 06 0609</a></div>
+<div class="card"><div class="eyebrow">Italian taxi network</div><div class="big">itTaxi</div><p class="muted">Request or schedule licensed taxis through the app/service.</p><a class="btn" target="_blank" rel="noopener" href="https://ittaxi.it/en/">Open itTaxi</a></div>
+<div class="card"><div class="eyebrow">International guests</div><div class="big">Uber</div><p class="muted">Uber operates ride options in Rome; the app shows the available service and quoted price for your trip.</p><a class="btn" target="_blank" rel="noopener" href="https://www.uber.com/it/en/r/cities/taxi/roma-lazio-it/">Open Uber</a></div>
+<div class="card"><div class="eyebrow">Public transport</div><div class="big">Tap & Go</div><p class="muted">ATAC BIT: <b>€1.50 / 100 minutes</b>. Contactless Tap & Go is available. Use the same card/device throughout your journey.</p><a class="btn" target="_blank" rel="noopener" href="https://www.atac.roma.it/en/tickets-and-passes/bit">ATAC fares</a></div>
+</div>
+</section>
+
+<section class="page stack" id="house"><div><div class="eyebrow">While you’re staying in my home</div><h2>A few things I ask</h2><p class="muted">This is my private home, not a hotel, and there is no reception on site. I care deeply about the house and about my neighbours. Please treat the space with the same care you would your own. If anything breaks or does not work properly, tell me as soon as possible so I can help.</p></div>
+<div class="card"><div class="eyebrow">Taking care of my home</div>
+<div class="rule"><span class="dot"></span><span>Please do not damage furniture or objects or use them improperly.</span></div>
+<div class="rule"><span class="dot"></span><span>Please be careful with the walls, especially when moving luggage.</span></div>
+<div class="rule"><span class="dot"></span><span>Please avoid staining bed linen and towels.</span></div>
+<div class="rule"><span class="dot"></span><span>When you go out, please turn off heating / A/C and lights.</span></div>
+<div class="rule"><span class="dot"></span><span><b>Do not disconnect the Wi-Fi router, external security camera or any cables behind the sofa.</b></span></div></div>
+<div class="card"><div class="eyebrow">Guests & neighbours</div>
+<div class="rule"><span class="dot"></span><span><b>Only registered guests may enter the property</b>, as required by Italian law.</span></div>
+<div class="rule"><span class="dot"></span><span><b>Parties and events are strictly forbidden.</b></span></div>
+<div class="rule"><span class="dot"></span><span>Please respect the tranquillity of the condominium, quiet hours and common areas.</span></div>
+<div class="rule"><span class="dot"></span><span>Always close the apartment/building doors and gate, and do not let unknown people enter.</span></div>
+<div class="rule"><span class="dot"></span><span>Do not put dirty dishes or cutlery back into cabinets or drawers.</span></div>
+<div class="rule"><span class="dot"></span><span>Please do not leave food around the house, as it can attract ants.</span></div></div>
+<div class="card"><div class="eyebrow">Plumbing · very important</div>
+<div class="rule"><span class="dot"></span><span>Do not put food or solids down any drain; please dispose of them properly.</span></div>
+<div class="rule"><span class="dot"></span><span><b>Only toilet paper may be flushed.</b> No wipes — even “flushable” ones — cotton balls, dental floss, kitchen paper, facial tissues, condoms or sanitary products. Please use the bins provided.</span></div>
+<p class="muted">If a blockage is caused by improper use, the plumber service will be charged.</p></div>
+<div class="card"><div class="eyebrow">Keys & locks</div><p>Please never force a key in a lock. If it does not turn, check that you have the correct key and direction, then try gently. Forcing a key can break it inside the lock.</p><p class="muted">Locksmith service will be charged if damage is caused by misuse.</p></div>
+<div class="grid"><div class="card"><b>Sleeping</b><p class="muted">King-size bed · large 210 × 140 cm sofa bed with topper · crib available.</p></div><div class="card"><b>Kitchen</b><p class="muted">Nespresso · milk frother · kettle · large fridge/freezer · microwave · electric oven · cookware · indoor & outdoor dining.</p></div><div class="card"><b>Bathroom</b><p class="muted">Bathtub with shower · shampoo, conditioner & shower gel · makeup mirror · towels: 1 large, 1 medium and 1 small per guest · 80 L water heater.</p></div><div class="card"><b>My little courtyard patio</b><p class="muted">A quiet place for morning coffee, reading or an evening aperitivo. Please keep voices low so everyone in the palazzo can relax.</p></div><div class="card"><b>Pets are welcome</b><p class="muted">Food and water bowls, pet bed and basic pet first-aid supplies are available. Cat supplies can be requested.</p></div><div class="card"><b>Longer stays</b><p class="muted">The home is professionally prepared before each stay. Optional extra cleaning is available for longer stays (€35 after 7 nights).</p></div></div></section>
+
+<section class="page stack" id="guides">
+<div><div class="eyebrow">Curated by your host</div><h2>Edoardo's Rome</h2><p class="muted">My personal Google Maps collections for exploring Rome without spending your trip researching where to go.</p></div>
+<a class="card" style="display:block;text-decoration:none" target="_blank" rel="noopener" href="https://maps.app.goo.gl/MXfyFFmqYZebzgsN6?g_st=ac"><div class="eyebrow">Eat & drink</div><div class="big">Restaurants, Bakeries, Bars & Gelato →</div></a>
+<a class="card" style="display:block;text-decoration:none" target="_blank" rel="noopener" href="https://maps.app.goo.gl/xX1RwwhhVqw39txr7?g_st=ac"><div class="eyebrow">Discover</div><div class="big">Landmarks →</div></a>
+<a class="card" style="display:block;text-decoration:none" target="_blank" rel="noopener" href="https://maps.app.goo.gl/apQYdWnegv8CbWkw7?g_st=ac"><div class="eyebrow">Practical</div><div class="big">Utilities →</div></a>
+</section>
+
+<section class="page stack" id="luggage"><div><div class="eyebrow">Travel light</div><h2>Luggage storage close to my home</h2><p class="muted">Useful before check-in or after check-out. Opening hours, availability and prices can change, so please check online before going.</p></div>
+<div class="card"><div class="eyebrow">Very close</div><div class="big">Bounce · Near Trevi Fountain</div><p class="muted"><b>Via Santa Maria in Via 17, 00187 Roma</b><br>About 2 minutes from Trevi Fountain · currently 10:00–20:00 daily · from €3.50/day.</p><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="https://bounce.com/stores/rome/Bof1oi">Book Bounce</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Via+Santa+Maria+in+Via+17+Roma">Maps</a></div></div>
+<div class="card"><div class="eyebrow">Smart lockers</div><div class="big">Stow Your Bags · Piazza di Spagna</div><p class="muted"><b>Via della Vite 42, 00187 Roma</b><br>Automatic lockers · currently 07:00–23:00 daily · from €2.49. Online booking recommended.</p><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="https://www.stowyourbags.com/it/shop/roma/deposito-bagagli-piazza-di-spagna/">Book locker</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Via+della+Vite+42+Roma">Maps</a></div></div>
+<div class="card"><div class="eyebrow">Trevi / Santi Apostoli</div><div class="big">Bounce · Roma Trevi</div><p class="muted"><b>Piazza dei Santi Apostoli 56–59, 00187 Roma</b><br>Convenient for the Trevi / Via del Corso side of the neighbourhood. Check live opening hours and price when booking.</p><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="https://bounce.com/stores/rome/F5GT1w">Book Bounce</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Piazza+dei+Santi+Apostoli+56+Roma">Maps</a></div></div>
+<div class="card"><div class="eyebrow">Near my home</div><div class="big">Luggage Storage Trevi Fountain</div><p class="muted"><b>Via della Panetteria 5, 00187 Roma</b></p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.turismoroma.it/en/hospitality/luggage-storage-trevi-fountain">Website</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Via+della+Panetteria+5+Roma">Maps</a></div></div></section>
+
+<section class="page stack" id="rome">
+<div><div class="eyebrow">Good to know</div><h2>Rome & Vatican essentials</h2></div>
+<div class="card"><div class="big">Vatican City</div><p class="muted"><b>St Peter's Basilica:</b> approximately 30–35 minutes on foot from the apartment, or walk to Barberini and take Metro A toward Battistini to Ottaviano, then continue on foot.</p><p class="muted"><b>Vatican Museums:</b> Metro A Barberini → Ottaviano, followed by a walk. For museum tickets, use the official Vatican Museums website whenever possible.</p><a class="btn" target="_blank" rel="noopener" href="https://www.museivaticani.va/">Official Vatican Museums</a></div>
+<div class="card stack">
+<div><b>💳 Cards & cash</b><p class="muted">Cards and contactless payments are widely used. A little euro cash can still be convenient.</p></div>
+<div><b>🔌 Electricity</b><p class="muted">Italy uses 230 V / 50 Hz. Check that US appliances support 230 V; a plug adapter alone does not convert voltage.</p></div>
+<div><b>💧 Water</b><p class="muted">Rome's public “nasoni” fountains provide drinking water; a refillable bottle is useful.</p></div>
+<div><b>🍽 Tipping</b><p class="muted">US-style 20% tipping is not expected. Rounding up or leaving a modest extra amount for good service is optional and appreciated.</p></div>
+<div><b>👜 Crowds</b><p class="muted">At stations, on public transport and around major attractions, keep phones and wallets secure and bags closed.</p></div>
+<div><b>⛪ Churches</b><p class="muted">Dress respectfully; major religious sites may enforce clothing and security requirements.</p></div>
+</div>
+</section>
+
+<section class="page stack" id="help">
+<div><div class="eyebrow">Safety & departure</div><h2>Help when you need it</h2></div>
+<div class="grid">
+<div class="card"><div class="eyebrow">European emergency number</div><div class="big" style="font-size:42px">112</div><p class="muted">For urgent police, medical or fire emergencies.</p><a class="btn primary" href="tel:112">Call 112</a></div>
+<div class="card"><div class="eyebrow">Apartment assistance</div><div class="big">Contact Edoardo</div><p class="muted">For non-emergency apartment issues, use the same Airbnb/booking messaging channel used for your reservation.</p></div>
+</div>
+<div class="card"><div class="eyebrow">Before you leave</div><div class="big">Check-out by 11:00</div>
+<p>☐ Take all personal belongings.<br>☐ Switch off lights and climate control.<br>☐ Leave the apartment reasonably tidy.<br>☐ Make sure doors and the building entrance are properly closed.</p>
+<button class="btn jump" data-page="luggage">Find luggage storage</button></div>
+<div class="card review"><div class="stars">★★★★★</div><div class="big">Did you enjoy your stay?</div><p class="muted">Your review helps future guests discover our Roman home. Thank you for staying with us.</p><a class="btn primary" target="_blank" rel="noopener" href="https://g.page/r/CS7Cc1gRHt3sEBI/review">Leave a Google review</a><p class="muted" style="font-size:12px">Grazie · Edoardo</p></div>
+</section>
+
+<footer><span>MY ROME YOUR HOME · TREVI · ROMA</span><a target="_blank" rel="noopener" href="https://myromeyourhome.com/">myromeyourhome.com</a></footer>
+</main>
+<script>
+(()=>{const app=document.getElementById('app'),pages=[...app.querySelectorAll('.page')],nav=[...app.querySelectorAll('.nav')];
+function show(id){pages.forEach(p=>p.classList.toggle('active',p.id===id));nav.forEach(b=>b.classList.toggle('active',b.dataset.page===id));window.scrollTo({top:0,behavior:'smooth'});}
+nav.forEach(b=>b.addEventListener('click',()=>show(b.dataset.page)));app.querySelectorAll('.jump').forEach(b=>b.addEventListener('click',()=>show(b.dataset.page)));
+document.getElementById('copy').addEventListener('click',async()=>{const t='Vicolo Scanderbeg 43, 00187 Roma, Italy',s=document.getElementById('copied');try{await navigator.clipboard.writeText(t);s.textContent='Address copied.'}catch(e){s.textContent=t}});
+})();
+</script>
+</body></html>
