@@ -1,0 +1,1075 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5f0e7">
+<title>My Rome Your Home | Edoardo’s Guest Guide</title>
+<meta name="description" content="Private digital concierge for guests of My Rome Your Home in Trevi, Rome.">
+<style>
+:root{--ivory:#f5f0e7;--paper:#fffdf8;--ink:#211d19;--muted:#70685f;--line:#ded5c8;--brass:#9b7740;--dark:#25211d;--radius:24px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ivory);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.55}
+a{color:inherit}.wrap{width:min(920px,100%);margin:auto;padding:18px 16px 54px}.serif{font-family:Georgia,"Times New Roman",serif}.eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);font-weight:700}
+.hero{padding:20px 0 24px;border-bottom:1px solid var(--line)}h1{font-size:clamp(42px,11vw,70px);line-height:.95;margin:12px 0 14px;font-weight:500}.lead{color:var(--muted);max-width:620px}
+.card{background:linear-gradient(145deg,#fffefa,#fffaf3);border:1px solid var(--line);border-radius:var(--radius);padding:22px;box-shadow:0 18px 55px rgba(48,38,27,.07)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:11px 15px;border:1px solid var(--line);border-radius:14px;background:var(--paper);text-decoration:none;font-weight:700;cursor:pointer}.btn.primary{background:var(--dark);color:white;border-color:var(--dark)}
+nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;padding:18px 0}.nav{min-height:68px;text-align:left;border:1px solid var(--line);border-radius:16px;background:var(--paper);padding:11px;cursor:pointer}.nav small{display:block;color:var(--muted);margin-top:2px}.nav.active{background:var(--dark);color:white}.nav.active small{color:#ddd4c8}
+.page{display:none}.page.active{display:block}.page h2{font:500 32px/1.1 Georgia,serif;margin:5px 0 16px}.stack>*+*{margin-top:12px}.muted{color:var(--muted)}.big{font:500 29px/1.15 Georgia,serif}.tag{font-size:11px;border:1px solid var(--line);padding:4px 8px;border-radius:999px}
+details summary{cursor:pointer;list-style:none}details summary::-webkit-details-marker{display:none}.route{border-left:2px solid var(--line);padding-left:13px;margin-top:16px}.rule{display:flex;gap:10px;margin:10px 0}.dot{width:7px;height:7px;border-radius:50%;background:var(--brass);margin-top:9px;flex:0 0 auto}
+.notice{background:#eee5d7;border-radius:18px;padding:17px}.review{text-align:center;padding:28px}.stars{color:var(--brass);font-size:24px;letter-spacing:3px}
+footer{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+@media(max-width:680px){.wrap{padding:12px 12px 42px}.grid,.grid3{grid-template-columns:1fr}.grid.mobile2{grid-template-columns:repeat(2,minmax(0,1fr))}nav{grid-template-columns:repeat(2,minmax(0,1fr));position:sticky;top:0;z-index:5;background:rgba(245,240,231,.96);padding:10px 0;backdrop-filter:blur(8px)}.card{padding:17px}}
+
+/* Premium finishing layer */
+body{background:
+radial-gradient(circle at 50% -10%,rgba(154,117,64,.10),transparent 28rem),
+var(--ivory);-webkit-font-smoothing:antialiased}
+.hero{position:relative;padding-top:34px}
+.hero:before{content:"ROMA · TREVI";display:block;font-size:9px;letter-spacing:.32em;color:var(--brass);margin-bottom:22px}
+.hero h1{letter-spacing:-.035em}
+.card,.notice,.nav,.btn{transition:transform .28s cubic-bezier(.2,.7,.2,1),box-shadow .28s ease,border-color .28s ease,background .28s ease,opacity .28s ease}
+@media(hover:hover){.card:hover{transform:translateY(-2px);box-shadow:0 22px 60px rgba(48,38,27,.10)}.btn:hover{transform:translateY(-1px);box-shadow:0 8px 24px rgba(48,38,27,.09)}.nav:hover{border-color:#c7b89f}}
+.btn{border-radius:999px}.btn.primary{box-shadow:0 8px 22px rgba(33,30,26,.13)}
+.nav{position:relative;overflow:hidden}.nav b{display:flex;align-items:center;gap:7px}.nav.active:after{content:"";position:absolute;left:12px;right:12px;bottom:7px;height:1px;background:rgba(255,255,255,.45)}
+.page.active{animation:pageIn .36s cubic-bezier(.2,.7,.2,1)}
+@keyframes pageIn{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.eyebrow{letter-spacing:.2em}
+.stars{letter-spacing:.18em}
+.rule{padding:3px 0}
+footer{letter-spacing:.08em}
+.icon{width:18px;height:18px;display:inline-block;vertical-align:-3px;stroke:currentColor;stroke-width:1.65;fill:none;stroke-linecap:round;stroke-linejoin:round}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.card,.notice,.nav,.btn,.page.active{transition:none;animation:none}}
+
+/* === Ultra-premium responsive refinement === */
+:root{
+ --content:980px;
+ --space:clamp(14px,2vw,22px);
+ --shadow-soft:0 10px 34px rgba(44,34,24,.055);
+ --shadow-lift:0 22px 70px rgba(44,34,24,.095);
+}
+html{scroll-padding-top:112px}
+body{font-size:clamp(15px,1.5vw,16px);text-rendering:optimizeLegibility}
+.wrap{width:min(var(--content),100%);padding:clamp(14px,3vw,28px) clamp(12px,3vw,24px) 64px}
+.hero{padding:clamp(30px,7vw,62px) 0 30px}
+.hero:before{margin-bottom:clamp(20px,4vw,34px)}
+.hero h1{font-size:clamp(46px,9vw,78px);max-width:720px}
+.lead{font-size:clamp(16px,2vw,18px);line-height:1.7;max-width:690px}
+h2,.big,.serif{text-wrap:balance}
+.page h2{font-size:clamp(30px,5vw,42px);letter-spacing:-.025em}
+.big{font-size:clamp(24px,3.5vw,31px);letter-spacing:-.018em}
+.card{padding:clamp(18px,3vw,27px);box-shadow:var(--shadow-soft);border-color:rgba(190,177,158,.72)}
+.notice{padding:clamp(18px,3vw,24px);border:1px solid rgba(190,177,158,.55)}
+.stack>*+*{margin-top:clamp(12px,2vw,18px)}
+.grid,.grid3{gap:clamp(10px,1.8vw,16px)}
+.actions{gap:9px}
+.btn{min-height:48px;padding:11px 17px;font-size:14px;line-height:1.2}
+nav{gap:9px;padding:18px 0 22px}
+.nav{min-height:74px;border-radius:19px;padding:12px 13px;box-shadow:0 5px 20px rgba(44,34,24,.035)}
+.nav b{font-size:14px}.nav small{font-size:11px;line-height:1.25}
+.icon{width:17px;height:17px}
+.route{border-left-color:#cbbda8}
+.page{transform-origin:top center}
+.page.active{animation:premiumIn .42s cubic-bezier(.22,.75,.2,1)}
+@keyframes premiumIn{from{opacity:0;transform:translateY(9px) scale(.997)}to{opacity:1;transform:none}}
+@media(hover:hover){
+ .card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lift);border-color:#cdbda5}
+ .nav:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(44,34,24,.07)}
+}
+@media(max-width:760px){
+ html{scroll-padding-top:174px}
+ .wrap{padding:10px 12px 48px}
+ .hero{padding-top:30px}
+ nav{
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  position:sticky;top:0;z-index:50;
+  margin-left:-12px;margin-right:-12px;
+  padding:9px 12px 10px;
+  background:rgba(245,240,231,.92);
+  -webkit-backdrop-filter:blur(18px) saturate(1.2);
+  backdrop-filter:blur(18px) saturate(1.2);
+  border-bottom:1px solid rgba(190,177,158,.48);
+ }
+ .nav{min-height:61px;border-radius:16px;padding:9px 10px}
+ .nav b{font-size:13px}.nav small{font-size:10px}
+ .card{border-radius:21px}
+ .grid,.grid3{grid-template-columns:1fr}
+ .grid.mobile2{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .actions>.btn,.actions>a.btn{flex:1 1 150px}
+}
+@media(max-width:430px){
+ html{scroll-padding-top:154px}
+ .hero h1{font-size:clamp(43px,14vw,58px)}
+ .hero .card .grid.mobile2{grid-template-columns:1fr 1fr}
+ nav{gap:7px}
+ .nav{min-height:58px;padding:8px 9px}
+ .nav b{font-size:12.5px;gap:5px}
+ .nav small{font-size:9.5px}
+ .icon{width:15px;height:15px}
+ .grid.mobile2{grid-template-columns:1fr}
+ #rome-weather .grid.mobile2{grid-template-columns:1fr 1fr}
+ .actions{display:grid;grid-template-columns:1fr}
+ .actions>.btn,.actions>a.btn{width:100%}
+ .btn{width:100%;min-height:50px}
+ .eyebrow{font-size:10px;letter-spacing:.17em}
+}
+@media(max-width:350px){
+ nav{grid-template-columns:1fr}
+ html{scroll-padding-top:116px}
+ .nav{min-height:52px}
+ .nav small{display:none}
+ #rome-weather .grid.mobile2{grid-template-columns:1fr}
+}
+@media(min-width:1000px){
+ nav{grid-template-columns:repeat(5,minmax(0,1fr))}
+ .hero{padding-top:56px}
+}
+@supports(padding:max(0px)){
+ .wrap{padding-left:max(12px,env(safe-area-inset-left));padding-right:max(12px,env(safe-area-inset-right));padding-bottom:max(48px,env(safe-area-inset-bottom))}
+}
+
+/* === Production polish · Boutique Roman home === */
+:root{
+ --ivory:#f4efe6;--paper:#fffdf8;--ink:#1e1a16;--muted:#746b61;
+ --line:#ddd3c5;--brass:#94703d;--dark:#211d19;
+ --hairline:rgba(105,88,66,.16);
+ --glass:rgba(248,244,237,.88);
+ --ease:cubic-bezier(.22,.78,.24,1);
+}
+*{-webkit-tap-highlight-color:transparent}
+body{overflow-x:hidden}
+a,button{touch-action:manipulation}
+button{font:inherit;color:inherit}
+.hero{isolation:isolate}
+.hero:after{
+ content:"";position:absolute;inset:0 -20vw auto;height:280px;z-index:-1;pointer-events:none;
+ background:radial-gradient(ellipse at 50% 0,rgba(148,112,61,.10),transparent 67%);
+}
+.hero>.card:first-of-type{margin-top:24px!important}
+.card{position:relative;overflow:hidden}
+.card:before{
+ content:"";position:absolute;inset:0;pointer-events:none;border-radius:inherit;
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.72);
+}
+.eyebrow{font-weight:750}
+p{max-width:75ch}
+nav{scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+.nav{outline:none}
+.nav:focus-visible,.btn:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.btn{letter-spacing:.005em}
+.btn.primary{background:linear-gradient(180deg,#29241f,#1d1a17)}
+.notice{box-shadow:inset 0 1px 0 rgba(255,255,255,.5)}
+.route p{margin:0;padding:0 0 17px}
+.route p:last-child{padding-bottom:0}
+.stars{font-size:clamp(22px,4vw,28px)}
+#rome-weather .card{background:rgba(255,253,248,.68)}
+#rome-weather .big{font-size:clamp(21px,3vw,27px)}
+footer{opacity:.9}
+@media(max-width:760px){
+ nav{
+  display:flex;overflow-x:auto;overscroll-behavior-inline:contain;
+  scroll-snap-type:x proximity;gap:8px;
+ }
+ .nav{
+  flex:0 0 auto;width:auto;min-width:132px;scroll-snap-align:start;
+  min-height:60px;
+ }
+ .nav.active{box-shadow:0 8px 22px rgba(33,29,25,.16)}
+ .page h2{margin-top:7px}
+ .card,.notice{scroll-margin-top:92px}
+}
+@media(max-width:430px){
+ nav{margin-left:-12px;margin-right:-12px;padding-left:12px;padding-right:12px}
+ .nav{min-width:122px}
+ .nav small{display:block}
+ #rome-weather .grid.mobile2{grid-template-columns:1fr 1fr}
+}
+@media(max-width:360px){
+ .nav{min-width:116px}
+ .nav b{font-size:12px}
+ #rome-weather .grid.mobile2{grid-template-columns:1fr}
+}
+
+/* === Mobile navigation: every destination visible === */
+@media(max-width:760px){
+ html{scroll-padding-top:250px}
+ nav{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  overflow:visible;
+  scroll-snap-type:none;
+  gap:7px;
+  padding:9px 10px 10px;
+ }
+ .nav{
+  width:100%;
+  min-width:0;
+  min-height:57px;
+  padding:8px 7px;
+  border-radius:15px;
+  scroll-snap-align:none;
+ }
+ .nav b{
+  justify-content:center;
+  gap:4px;
+  font-size:11.5px;
+  line-height:1.12;
+  text-align:center;
+ }
+ .nav small{
+  display:block;
+  margin-top:4px;
+  font-size:8.5px;
+  line-height:1.08;
+  text-align:center;
+ }
+ .nav .icon{width:14px;height:14px;flex:0 0 14px}
+}
+@media(max-width:430px){
+ html{scroll-padding-top:270px}
+ nav{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+ .nav{min-height:55px;padding:7px 5px}
+ .nav b{font-size:10.7px}
+ .nav small{font-size:8px}
+}
+@media(max-width:350px){
+ html{scroll-padding-top:360px}
+ nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .nav{min-height:53px}
+ .nav small{display:block}
+}
+
+/* === FINAL ART-DIRECTION LAYER · My Rome Your Home === */
+:root{
+  --ivory:#f3eee5;
+  --paper:#fffdf8;
+  --paper-2:#faf6ee;
+  --ink:#1d1915;
+  --muted:#746b61;
+  --line:rgba(112,94,71,.18);
+  --brass:#96703c;
+  --brass-deep:#765329;
+  --dark:#201c18;
+  --radius:26px;
+  --radius-sm:18px;
+  --shadow-1:0 12px 34px rgba(44,34,24,.055);
+  --shadow-2:0 26px 80px rgba(44,34,24,.10);
+}
+html{background:var(--ivory)}
+body{
+  background:
+    radial-gradient(900px 430px at 50% -120px,rgba(150,112,60,.13),transparent 68%),
+    linear-gradient(180deg,#f7f2e9 0,var(--ivory) 520px);
+}
+.wrap{max-width:1040px}
+.hero{
+  border-bottom:0;
+  padding-top:clamp(38px,7vw,76px);
+  padding-bottom:clamp(26px,4vw,42px);
+}
+.hero:before{
+  content:"MY ROME YOUR HOME · TREVI";
+  display:inline-flex;
+  align-items:center;
+  min-height:28px;
+  padding:0 12px;
+  border:1px solid rgba(150,112,60,.28);
+  border-radius:999px;
+  background:rgba(255,253,248,.52);
+  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(12px);
+  font-size:9px;
+  letter-spacing:.25em;
+  color:var(--brass-deep);
+}
+.hero:after{
+  height:440px;
+  background:
+    radial-gradient(circle at 18% 10%,rgba(150,112,60,.10),transparent 27%),
+    radial-gradient(circle at 82% 4%,rgba(255,255,255,.85),transparent 22%);
+}
+.hero h1{
+  max-width:850px;
+  margin-top:20px;
+  font-size:clamp(52px,9.5vw,92px);
+  line-height:.91;
+  letter-spacing:-.052em;
+}
+.hero h1 em{font-weight:400;color:var(--brass-deep)}
+.lead{max-width:760px;font-size:clamp(16px,2vw,19px);line-height:1.72}
+.hero .card{
+  background:linear-gradient(145deg,rgba(255,254,250,.93),rgba(250,245,236,.88));
+  border-color:rgba(150,112,60,.20);
+}
+.card,.notice{
+  border-color:var(--line);
+  box-shadow:var(--shadow-1);
+}
+.card{
+  background:
+    linear-gradient(145deg,rgba(255,254,250,.97),rgba(252,248,240,.94));
+}
+.card:after{
+  content:"";
+  position:absolute;
+  left:0;top:22px;bottom:22px;width:2px;
+  border-radius:2px;
+  background:linear-gradient(180deg,transparent,rgba(150,112,60,.32),transparent);
+  opacity:.55;
+  pointer-events:none;
+}
+.notice{
+  background:linear-gradient(145deg,#eee4d4,#f4ecdf);
+}
+.page>div:first-child:not(.card):not(.notice){
+  padding:10px 2px 4px;
+}
+.page h2{
+  font-size:clamp(34px,5.4vw,48px);
+  line-height:1.02;
+  max-width:780px;
+}
+.eyebrow{color:var(--brass-deep);font-size:10px;letter-spacing:.21em}
+.big{line-height:1.08}
+.btn{
+  border-color:rgba(112,94,71,.22);
+  background:rgba(255,253,248,.86);
+  box-shadow:0 2px 0 rgba(255,255,255,.7) inset;
+}
+.btn.primary{
+  background:linear-gradient(180deg,#2a251f 0,#1d1916 100%);
+  box-shadow:0 10px 26px rgba(32,28,24,.15),inset 0 1px rgba(255,255,255,.10);
+}
+nav{
+  position:relative;
+  padding:14px;
+  margin:6px 0 28px;
+  border:1px solid var(--line);
+  border-radius:28px;
+  background:rgba(248,244,237,.76);
+  -webkit-backdrop-filter:blur(18px) saturate(1.15);
+  backdrop-filter:blur(18px) saturate(1.15);
+  box-shadow:0 16px 48px rgba(44,34,24,.06);
+}
+.nav{
+  border-color:rgba(112,94,71,.16);
+  background:rgba(255,253,248,.72);
+  box-shadow:none;
+}
+.nav.active{
+  background:linear-gradient(145deg,#29241f,#1d1916);
+  box-shadow:0 10px 26px rgba(32,28,24,.16);
+}
+.nav.active:after{background:rgba(201,169,116,.75)}
+#rome-weather{
+  background:
+    radial-gradient(circle at 88% 12%,rgba(150,112,60,.13),transparent 32%),
+    linear-gradient(145deg,#fffdf8,#f8f1e6);
+}
+#rome-weather .card{background:rgba(255,255,255,.46);border-color:rgba(150,112,60,.16)}
+.stars{color:#9a743d;text-shadow:0 1px rgba(255,255,255,.8)}
+.review{
+  background:
+    radial-gradient(circle at 50% 0,rgba(150,112,60,.14),transparent 44%),
+    linear-gradient(145deg,#fffdf8,#f7efe3);
+}
+details.card summary{
+  display:flex;align-items:center;gap:10px;min-height:32px;
+}
+details.card summary:after{
+  content:"+";
+  margin-left:auto;
+  font:400 24px/1 Georgia,serif;
+  color:var(--brass-deep);
+}
+details.card[open] summary:after{content:"−"}
+.tag{background:rgba(150,112,60,.08);border-color:rgba(150,112,60,.22);color:var(--brass-deep)}
+footer{padding-bottom:18px}
+
+/* floating return-to-menu control */
+.guide-menu-fab{
+  display:none;
+  position:fixed;
+  right:max(14px,env(safe-area-inset-right));
+  bottom:max(14px,env(safe-area-inset-bottom));
+  z-index:80;
+  min-height:48px;
+  padding:0 17px;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;
+  background:rgba(31,27,23,.94);
+  color:#fff;
+  box-shadow:0 16px 42px rgba(31,27,23,.24);
+  -webkit-backdrop-filter:blur(14px);
+  backdrop-filter:blur(14px);
+  font-weight:750;
+  letter-spacing:.01em;
+}
+.guide-menu-fab span{opacity:.68;font-weight:500;margin-left:6px}
+
+/* desktop refinement */
+@media(min-width:761px){
+  nav{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .nav{min-height:76px}
+  .page{padding:4px 0 12px}
+}
+
+/* Mobile: all destinations visible, no hidden horizontal scroll, no giant sticky obstruction */
+@media(max-width:760px){
+  html{scroll-padding-top:18px}
+  .wrap{padding:10px 12px 84px}
+  .hero{padding-top:34px}
+  .hero h1{font-size:clamp(50px,15vw,70px)}
+  nav{
+    position:relative;
+    top:auto;
+    z-index:10;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    overflow:visible;
+    margin:8px 0 22px;
+    padding:9px;
+    gap:7px;
+    border-radius:22px;
+  }
+  .nav{
+    width:100%;
+    min-width:0;
+    min-height:58px;
+    padding:8px 6px;
+    border-radius:15px;
+  }
+  .nav b{justify-content:center;text-align:center;font-size:11px;line-height:1.12}
+  .nav small{display:block;text-align:center;font-size:8px;line-height:1.08;margin-top:4px}
+  .nav .icon{width:14px;height:14px;flex:0 0 14px}
+  .guide-menu-fab{display:inline-flex;align-items:center;justify-content:center}
+  .page h2{font-size:clamp(34px,10vw,44px)}
+  .card{border-radius:22px}
+  .actions{gap:8px}
+}
+@media(max-width:370px){
+  nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav{min-height:54px}
+}
+@media(prefers-reduced-motion:reduce){
+  .guide-menu-fab{transition:none}
+}
+
+
+/* === CONCIERGE EDIT · tighter information architecture === */
+.stack{gap:13px}
+.page{gap:13px}
+.page>div:first-child:not(.card):not(.notice){margin-bottom:3px}
+.card,.notice{padding:clamp(17px,2.4vw,23px)}
+.card .big{margin-bottom:8px}
+.card p:last-child{margin-bottom:0}
+.actions{margin-top:13px}
+.route{margin-top:12px}
+.route p{padding-bottom:13px}
+.grid{gap:11px}
+section.page{max-width:940px;margin-inline:auto}
+section.page>h2,section.page>div:first-child:not(.card):not(.notice){max-width:820px}
+.compact-details{padding:0!important;overflow:hidden}
+.compact-details>summary{
+  list-style:none;cursor:pointer;padding:17px 20px;
+  font-weight:760;letter-spacing:-.01em;
+}
+.compact-details>summary::-webkit-details-marker{display:none}
+.compact-details>summary:after{
+  content:"＋";float:right;color:var(--brass-deep);font-weight:400
+}
+.compact-details[open]>summary:after{content:"−"}
+.compact-details>.detail-body{padding:0 20px 20px}
+.concierge-divider{
+  display:flex;align-items:center;gap:12px;margin:8px 2px 0;
+  color:var(--brass-deep);font-size:9px;font-weight:800;letter-spacing:.20em;text-transform:uppercase
+}
+.concierge-divider:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,var(--line),transparent)}
+@media(max-width:760px){
+ .stack,.page{gap:10px}
+ .card,.notice{padding:16px}
+ .page h2{margin-bottom:4px}
+ .lead{line-height:1.58}
+ .actions{margin-top:11px}
+ .btn{min-height:45px}
+}
+
+/* === LUXURY CONCIERGE IA · final design system === */
+:root{
+ --champagne:#b18a52;--champagne-soft:#d8c29f;--espresso:#1c1814;
+ --porcelain:#fffdf8;--travertine:#f1ebe1;--taupe:#756b60;
+}
+body{
+ background:
+ radial-gradient(1100px 520px at 50% -150px,rgba(177,138,82,.15),transparent 68%),
+ linear-gradient(180deg,#f8f4ed 0,#f1ebe1 580px,#f4efe7 100%);
+}
+.wrap{max-width:1100px}
+.hero{padding-top:clamp(48px,8vw,92px)}
+.hero:before{
+ content:"MY ROME YOUR HOME  ·  PRIVATE GUEST CONCIERGE";
+ letter-spacing:.28em;border-color:rgba(177,138,82,.34);
+ background:rgba(255,253,248,.58)
+}
+.hero h1{
+ font-family:Georgia,"Times New Roman",serif;
+ font-weight:400;
+ font-size:clamp(58px,10vw,104px);
+ line-height:.86;
+ letter-spacing:-.058em;
+}
+.hero .lead{font-size:clamp(16px,1.8vw,19px);max-width:700px}
+nav{
+ grid-template-columns:repeat(3,minmax(0,1fr));
+ gap:8px;
+ padding:10px;
+ border-radius:25px;
+ background:rgba(255,253,248,.68);
+ border-color:rgba(177,138,82,.20);
+ box-shadow:0 20px 60px rgba(45,35,25,.065);
+}
+.nav{min-height:68px;border-radius:17px}
+.nav.active{
+ background:linear-gradient(145deg,#29231e,#171411);
+ box-shadow:0 14px 30px rgba(28,24,20,.18);
+}
+.page{max-width:960px!important;gap:11px!important;padding-top:10px}
+.page>div:first-child:not(.card):not(.notice),.lux-intro{
+ margin:14px 0 15px;padding:0 3px!important
+}
+.page h2,.lux-intro h2{
+ font-family:Georgia,"Times New Roman",serif;
+ font-weight:400;
+ font-size:clamp(39px,6vw,56px);
+ letter-spacing:-.035em;
+ line-height:.98;
+ margin:7px 0 10px;
+}
+.card,.notice{
+ border-radius:21px;
+ padding:19px 21px;
+ background:rgba(255,253,248,.82);
+ border:1px solid rgba(112,94,71,.15);
+ box-shadow:0 10px 30px rgba(42,32,23,.04);
+}
+.card:after{opacity:.32}
+.card:hover{box-shadow:0 16px 42px rgba(42,32,23,.065)}
+.eyebrow{color:#8a6637;letter-spacing:.22em}
+.big{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.022em}
+.lux-section-break{
+ display:flex;align-items:center;gap:16px;
+ margin:29px 2px 8px;
+ color:#806039;
+ font-size:9px;font-weight:800;letter-spacing:.25em;text-transform:uppercase;
+}
+.lux-section-break:before{content:"";width:28px;height:1px;background:#b18a52}
+.lux-section-break:after{content:"";height:1px;flex:1;background:linear-gradient(90deg,rgba(177,138,82,.35),transparent)}
+.concierge-divider{margin-top:20px}
+.btn{
+ border-radius:999px;
+ min-height:44px;
+ padding-inline:16px;
+ border-color:rgba(112,94,71,.18);
+}
+.btn.primary{
+ background:linear-gradient(145deg,#29231e,#171411);
+}
+.notice{
+ background:linear-gradient(145deg,rgba(236,225,208,.92),rgba(246,239,229,.92));
+ border-color:rgba(177,138,82,.22);
+}
+details.compact-details{
+ background:rgba(255,253,248,.64)
+}
+#rome-weather{
+ border:1px solid rgba(177,138,82,.22);
+ background:
+ radial-gradient(circle at 92% 5%,rgba(177,138,82,.14),transparent 35%),
+ linear-gradient(145deg,#fffdf8,#f7efe4);
+}
+.review{
+ background:
+ radial-gradient(circle at 50% 0,rgba(177,138,82,.13),transparent 46%),
+ linear-gradient(145deg,#fffdf8,#f7efe4);
+}
+.guide-menu-fab{
+ background:rgba(27,23,19,.94);
+ border:1px solid rgba(216,194,159,.22);
+}
+footer{border-top-color:rgba(177,138,82,.20)}
+@media(min-width:900px){
+ nav{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .nav{min-height:72px}
+}
+@media(max-width:760px){
+ .wrap{padding:10px 12px 86px}
+ .hero{padding-top:40px}
+ .hero h1{font-size:clamp(55px,16vw,76px)}
+ nav{
+   grid-template-columns:repeat(3,minmax(0,1fr));
+   gap:6px;padding:7px;border-radius:20px
+ }
+ .nav{min-height:56px;padding:7px 5px;border-radius:14px}
+ .nav b{font-size:10.5px}
+ .nav small{font-size:7.6px}
+ .page{gap:9px!important}
+ .card,.notice{padding:16px 17px;border-radius:19px}
+ .lux-section-break{margin-top:24px}
+}
+@media(max-width:355px){
+ nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+
+/* Arrival key journey */
+.key-journey{border-color:rgba(177,138,82,.24)!important}
+.key-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin:17px 0 4px}
+.key-step{
+ min-width:0;padding:13px 12px;border:1px solid rgba(112,94,71,.14);
+ border-radius:16px;background:rgba(255,255,255,.38);
+ display:flex;align-items:flex-start;gap:9px
+}
+.key-step b{display:block;font-size:12px;line-height:1.2}
+.key-step small{display:block;margin-top:5px;color:var(--muted);font-size:10px;line-height:1.28}
+.key-dot{width:12px;height:12px;flex:0 0 12px;margin-top:1px;border-radius:50%;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.key-dot.yellow{background:#d9b947}
+.key-dot.blue{background:#47769e}
+.key-dot.metal{background:linear-gradient(145deg,#e1dfda,#99958e)}
+.key-dot.orange{background:#c97638}
+.key-note{margin-top:12px;padding:13px 15px!important;border-radius:15px!important;font-size:12px}
+@media(max-width:760px){
+ .key-steps{grid-template-columns:1fr 1fr;gap:7px}
+ .key-step{padding:12px 10px}
+}
+
+/* === Home dashboard weather dock === */
+#essentials{position:relative}
+.home-weather-dock{
+ position:absolute;
+ top:8px;
+ right:0;
+ width:min(330px,38%);
+ z-index:2;
+}
+.home-weather-dock #rome-weather{
+ padding:14px 15px;
+ border-radius:19px;
+ box-shadow:0 16px 42px rgba(42,32,23,.07);
+ background:
+   radial-gradient(circle at 92% 8%,rgba(177,138,82,.16),transparent 38%),
+   rgba(255,253,248,.88);
+ -webkit-backdrop-filter:blur(16px);
+ backdrop-filter:blur(16px);
+}
+.home-weather-dock #rome-weather .eyebrow{font-size:8px}
+.home-weather-dock #rome-weather .big{font-size:18px}
+.home-weather-dock #rome-weather p{font-size:11px;line-height:1.35}
+#essentials>div:first-child:not(.card):not(.notice){
+ max-width:56%;
+ min-height:150px;
+ padding-top:12px!important;
+}
+@media(max-width:760px){
+ .home-weather-dock{
+   position:relative;top:auto;right:auto;width:100%;margin:0 0 4px;
+ }
+ #essentials>div:first-child:not(.card):not(.notice){
+   max-width:none;min-height:0;
+ }
+ .home-weather-dock #rome-weather{padding:14px 15px}
+}
+</style>
+</head>
+<body>
+<main class="wrap" id="app">
+<header class="hero">
+<div class="eyebrow">Private digital concierge · Roma</div>
+<h1 class="serif">My Rome<br><em>Your Home</em></h1>
+<p class="lead">Welcome to my home in the heart of Rome. I made this private guide for you — everything you need for the apartment, getting around, eating well and enjoying the city without wasting time researching.</p>
+<div class="card" style="margin-top:18px">
+<div class="eyebrow">Your address</div><div class="big" style="margin-top:5px">Vicolo Scanderbeg 43</div>
+<div class="muted">00187 Roma, Italy · Trevi</div>
+<div class="actions" style="margin-top:14px"><a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Vicolo+Scanderbeg+43+00187+Roma">Open in Google Maps</a><button class="btn" id="copy">Copy address</button></div>
+<div id="copied" class="muted" style="font-size:12px;margin-top:6px" aria-live="polite"></div>
+</div>
+<div class="card" style="margin-top:12px"><div class="eyebrow">Wi-Fi · Make yourself at home</div><div class="grid mobile2" style="margin-top:10px"><div><span class="muted">Network</span><br><b style="font-size:19px">Domus Fontane</b></div><div><span class="muted">Password</span><br><b style="font-size:19px">Fontane43</b></div></div><button class="btn" id="copywifi" style="margin-top:14px">Copy Wi-Fi password</button><div id="wificopied" class="muted" style="font-size:12px;margin-top:6px"></div></div></header><div class="actions" aria-label="Quick guest actions" style="margin:14px 0 2px">
+<a class="btn" href="https://wa.me/393338787929" target="_blank" rel="noopener">WhatsApp Edoardo</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Vicolo+Scanderbeg+43,+00187+Roma">Directions home</a>
+<button class="btn" data-go="checkout">Check-out</button>
+</div>
+
+<nav aria-label="Guide sections">
+<button class="nav active" data-page="essentials" aria-label="Open essentials section"><b><svg class="icon" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18M6.5 6.5l11 11M17.5 6.5l-11 11"/></svg>Home</b><small>At a glance</small></button>
+<button class="nav" data-page="travel" aria-label="Open travel section"><b><svg class="icon" viewBox="0 0 24 24"><path d="M3 11.5l18-7-7 18-2.5-8.5L3 11.5z"/></svg>Getting Around</b><small>Airport · metro · taxi</small></button>
+<button class="nav" data-page="taxi" aria-label="Open taxi section"><b><svg class="icon" viewBox="0 0 24 24"><path d="M5 17h14l-1-7H6l-1 7zM8 10l1-3h6l1 3M7 17v2M17 17v2"/></svg>Check-in & Keys</b><small>Arrive & enter</small></button>
+<button class="nav" data-page="house" aria-label="Open house section"><b><svg class="icon" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M6 10v10h12V10M10 20v-6h4v6"/></svg>House Rules</b><small>Please read</small></button>
+<button class="nav" data-page="guides" aria-label="Open guides section"><b><svg class="icon" viewBox="0 0 24 24"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"/><circle cx="12" cy="10" r="2"/></svg>Explore Rome</b><small>Eat · see · enjoy</small></button>
+
+
+<button class="nav" data-page="stay" aria-label="Open stay section"><b><svg class="icon" viewBox="0 0 24 24"><path d="M12 3v18M5 8h14M7 12h10M9 16h6"/></svg>The Apartment</b><small>How things work</small></button><button class="nav" data-page="checkout" aria-label="Open checkout section"><b><svg class="icon" viewBox="0 0 24 24"><path d="M4 4h10v16H4zM14 12h7M18 9l3 3-3 3M8 12h.01"/></svg>Check-out</b><small>Before you leave</small></button><button class="nav" data-page="book" aria-label="Open book section"><b><svg class="icon" viewBox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"/></svg>Book Direct</b><small>Come back to Rome</small></button><button class="nav" data-page="help" aria-label="Open help section"><b><svg class="icon" viewBox="0 0 24 24"><path d="M7 4l3 4-2 2c1.5 3 3 4.5 6 6l2-2 4 3c-1 3-3 4-5 3C9 18 6 15 4 9 3 7 4 5 7 4z"/></svg>Help</b><small>Problems · emergency</small></button>
+</nav>
+
+<section class="page active stack" id="essentials"><div class="home-weather-dock">
+<div class="card" id="rome-weather">
+<div class="eyebrow">Rome today</div>
+<div class="big serif" style="font-size:30px">Weather for your walk</div>
+<p class="muted" id="weather-status" aria-live="polite">Loading today and tomorrow’s forecast…</p>
+<div class="grid mobile2" style="margin-top:12px">
+<div class="card" style="box-shadow:none"><div class="eyebrow">Today</div><div class="big" id="weather-today">—</div><div class="muted" id="weather-today-detail">—</div></div>
+<div class="card" style="box-shadow:none"><div class="eyebrow">Tomorrow</div><div class="big" id="weather-tomorrow">—</div><div class="muted" id="weather-tomorrow-detail">—</div></div>
+</div>
+<p class="muted" style="font-size:11px;margin-top:12px">Live forecast for central Rome · <a target="_blank" rel="noopener" href="https://open-meteo.com/">Weather data by Open-Meteo</a></p>
+</div>
+</div>
+
+<div><div class="eyebrow">Welcome to my home</div><h2>Make yourself at home in Trevi</h2></div>
+<div class="grid3">
+<div class="card"><div class="eyebrow">Check-in</div><div class="big">From 14:00</div><p class="muted">Bag drop may be possible from 11:30 during cleaning. Please return after 14:15 for the apartment.</p></div>
+<div class="card"><div class="eyebrow">Check-out</div><div class="big">By 11:00</div><p class="muted">For a later departure from Rome, see the luggage-storage section.</p></div>
+<div class="card"><div class="eyebrow">Your host</div><div class="big">Edoardo</div><p class="muted">For apartment assistance, please use the same messaging channel used for your reservation.</p></div>
+</div>
+<div class="card"><div class="eyebrow">Walkable Rome</div><div class="grid3 mobile2" style="margin-top:14px">
+<div><b>Trevi Fountain</b><br><span class="muted">≈ 1–2 min</span></div><div><b>Via del Corso</b><br><span class="muted">≈ 5 min</span></div><div><b>Barberini Metro A</b><br><span class="muted">≈ 7 min</span></div><div><b>Spanish Steps</b><br><span class="muted">≈ 10 min</span></div><div><b>Pantheon</b><br><span class="muted">≈ 12 min</span></div><div><b>Colosseum</b><br><span class="muted">≈ 20 min</span></div><div><b>Piazza Navona</b><br><span class="muted">≈ 12–18 min</span></div><div><b>St Peter\'s / Vatican</b><br><span class="muted">≈ 30–35 min walk</span></div>
+</div></div>
+<div class="card"><div class="eyebrow">About my home</div><div class="big">Quiet Trevi Fountain Apartment · Patio & Courtyard</div><p class="muted">My private home is tucked inside a peaceful 18th-century palazzo in Rione Trevi, around a one-minute walk from the Trevi Fountain. The entire ground-floor apartment is yours, with no stairs, windows facing the internal courtyard and no street noise.</p><div class="grid3 mobile2"><div><b>Up to 4 guests</b><br><span class="muted">1 bedroom · 2 beds</span></div><div><b>Private patio</b><br><span class="muted">Quiet courtyard setting</span></div><div><b>Ground floor</b><br><span class="muted">No stairs</span></div><div><b>King-size bed</b><br><span class="muted">+ 210 × 140 cm sofa bed</span></div><div><b>Family friendly</b><br><span class="muted">Crib + high chair</span></div><div><b>Pet friendly</b><br><span class="muted">Bowls + pet bed</span></div></div><p class="muted">Fast Wi-Fi · A/C · heating · 50&quot; Smart TV · Netflix · Prime Video · washing machine · dedicated workspace.</p></div><div class="card">
+<div class="eyebrow">Show this to your driver</div>
+<div class="big">Vicolo Scanderbeg 43</div>
+<p class="muted">00187 Roma, Italy</p>
+<p class="serif" style="font-size:21px">“Per favore, mi porti a Vicolo Scanderbeg 43.”</p>
+<div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Vicolo+Scanderbeg+43,+00187+Roma">Directions home</a></div>
+</div>
+<div class="card"><div class="eyebrow">Quick actions</div><div class="big">Everything you may need in a few seconds</div><div class="actions" style="margin-top:14px"><button class="btn" data-quick="wifi">Wi-Fi</button><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Vicolo+Scanderbeg+43,+00187+Roma">Get home</a><a class="btn" href="tel:+393338787929">Call Edoardo</a><a class="btn" target="_blank" rel="noopener" href="https://wa.me/393338787929">WhatsApp</a><button class="btn primary" data-go="taxi">Get a taxi</button></div></div><div class="notice"><div class="eyebrow">A note from your host</div><p class="big" style="margin:7px 0">Benvenuti a Roma.</p><span class="muted">I take great care of this home, and respectful travellers are always welcome. I hope you feel at home here and enjoy Rome as much as I do. — Edoardo</span></div>
+</section>
+
+<section class="page stack" id="travel">
+<div><div class="eyebrow">Door-to-door travel</div><h2>Airports, Termini & Civitavecchia</h2><p class="muted">Use official white taxis from designated ranks. Fixed fares are for eligible direct journeys between the listed airport/port and addresses within the Aurelian Walls.</p></div>
+<details class="card" open><summary><span class="tag">FCO</span> <b>Fiumicino · Leonardo da Vinci</b></summary>
+<div class="route"><b>FCO → apartment · easiest</b><p class="muted">Official white taxi: <b>€55 per vehicle</b> fixed fare to the Aurelian Walls.</p></div>
+<div class="route"><b>FCO → apartment · public transport</b><p class="muted">Leonardo Express to Roma Termini: <b>€14 · 32 minutes · non-stop</b>, normally every 15 minutes. From Termini take Metro A toward Battistini to Barberini, then walk about 7 minutes.</p></div>
+<div class="route"><b>Apartment → FCO</b><p class="muted">Official taxi: €55 fixed fare. Or Barberini → Metro A to Termini → Leonardo Express.</p></div>
+<div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.trenitalia.com/en/connections/leonardo-express.html">Leonardo Express</a></div>
+</details>
+<details class="card"><summary><span class="tag">CIA</span> <b>Ciampino · G.B. Pastine</b></summary>
+<div class="route"><b>CIA ↔ apartment</b><p class="muted">Official white taxi: <b>€40 per vehicle</b> fixed fare between Ciampino Airport and the Aurelian Walls.</p></div>
+<div class="route"><b>Budget option</b><p class="muted">Public buses connect the airport with Rome's transport network. With luggage, the official taxi is the simplest door-to-door option.</p></div>
+</details>
+<details class="card"><summary><span class="tag">CRUISE</span> <b>Civitavecchia Port</b></summary>
+<div class="route"><b>Port ↔ apartment</b><p class="muted">Official fixed taxi fare: <b>€150 per vehicle</b> between Civitavecchia Port and destinations within the Aurelian Walls.</p></div>
+<div class="route"><b>Best value</b><p class="muted">Reach Civitavecchia railway station and take a Trenitalia regional train into Rome, then continue by taxi or public transport. Leave generous time on embarkation days.</p></div>
+</details>
+<details class="card"><summary><span class="tag">TRAIN</span> <b>Roma Termini</b></summary><p class="muted">Take Metro A toward Battistini → Barberini, then walk to Vicolo Scanderbeg 43. Alternatively, use the official taxi rank outside Termini.</p></details>
+<div class="notice"><b>Airport safety</b><br><span class="muted">Do not accept unsolicited rides from people approaching you inside terminals. Follow signs to the official taxi rank.</span></div>
+
+<div class="lux-section-break"><span>Taxi & local transport</span></div>
+<div><div class="eyebrow">Taxi & rides</div><h2>Getting a car in Rome</h2><p class="muted">Licensed taxis, ride apps and contactless public transport.</p></div>
+<div class="grid">
+<div class="card"><div class="eyebrow">Rome city taxi</div><div class="big">ChiamaTaxi 060609</div>
+<div class="card"><div class="eyebrow">Italian taxi network</div><div class="big">itTaxi</div>
+<div class="card"><div class="eyebrow">International guests</div><div class="big">Uber</div>
+<div class="card"><div class="eyebrow">Public transport</div><div class="big">Tap & Go</div>
+</div>
+</section>
+
+<section class="page stack" id="taxi">
+<div class="lux-intro"><div class="eyebrow">CHECK-IN</div><h2>Check-in & keys</h2><p class="muted">Everything you need to arrive smoothly, enter the building and use the keys correctly.</p></div>
+<div class="card"><div class="eyebrow">Your arrival</div><div class="big">I’ll welcome you personally</div>
+<div class="lux-section-break"><span>Entering my home</span></div>
+<div class="card key-journey">
+<div class="eyebrow">Your keys · outside → inside</div>
+<div class="big">Four doors, four easy steps</div>
+<p class="muted">Please use the keys in this order as you come in. <b>All doors unlock by turning the key to the left.</b> If a key does not turn easily, please don’t force it — check the colour and try again gently.</p>
+<div class="key-steps" aria-label="Key order from outside to inside">
+<div class="key-step"><span class="key-dot yellow"></span><div><b>1 · Yellow key</b><small>First door from outside</small></div></div>
+<div class="card"><div class="eyebrow">Address</div><div class="big">Vicolo Scanderbeg 43</div><p class="muted">00187 Roma, Italy · Trevi. If you need help finding the entrance, message me on WhatsApp.</p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination=Vicolo+Scanderbeg+43,+00187+Roma">Directions home</a><a class="btn primary" target="_blank" rel="noopener" href="https://wa.me/393338787929">WhatsApp Edoardo</a></div></div>
+</section>
+
+<section class="page stack" id="house">
+<div><div class="eyebrow">While you’re staying in my home</div><h2>A few things I kindly ask</h2>
+<p class="muted">I really care about the quality of the service I try to provide and that also depends on you. If anything breaks or doesn’t work please let me know as soon as possible.</p></div>
+<p>Please <b>do not unplug or disconnect any cables near the sofa or underneath the bedside table</b>. They are part of the home’s connected equipment and should remain plugged in during your stay.</p></div>
+<div class="card"><div class="eyebrow">My house rules · as shared with my guests</div>
+<p><b>🚩 Respect my house as if it was yours, bad behaviours are not tolerable.</b> I remind you that it is a palace from the XVIII century. During your stay, you are responsible for treating the house and its contents with care. Please be mindful of condominium quiet hours, especially in the evenings and early mornings. Avoid loud noises and respect the peace of our neighbors.</p>
+<p>❌ Don’t damage the furniture and objects or use it improperly.</p>
+<p>❌ Don’t touch or damage the walls in any way. Don't smash your luggage against the wall.</p>
+<p>❌ Don't stain bed linens and towels.</p>
+<p>❌ Do not force incompatible plugs into the sockets.This may cause damage or create a fire hazard and your safety at risk.<br>If you are unsure about your plug type, please ask before doing anything. I am happy to provide the solution and the right adapter.<br>Guests will be held responsible for any damages resulting from incorrect plug use.</p>
+<p>❌For your safety and the safety of the home, always turn off all appliances (air conditioners, kitchen devices, stove and lights) before leaving the apartment.<br>Never leave any device running unattended. this is a serious fire hazard and strictly prohibited. When you’re not home please turn off the heating or AC and lights.</p>
+<p>❌ Do not disconnect the WiFi router or our security camera. Don't unplug any cable behind the sofa. Please also do not disconnect or unplug the cables near the sofa or underneath the bedside table.</p>
+<p>❌ It is forbidden to have other people inside the house if not declared during the check in, for security reasons and Italian law.</p>
+<p>❌ It is forbidden to have parties.</p>
+<p>❌ Do not use all the electric appliances all together. It will cause a power surge and electrical outage. For example if the air conditioning is on and you are using the stove turning on the hairdryer will cause a power outage.</p>
+<p>❌ Don’t put back dirty dishes or cutlery inside the kitchen cabinets or drawers.</p>
+<p>❌ Don't leave any kind of food around the house. Ants are not welcome in my house.</p>
+<p>❌ Don’t throw out food and solids down the drain, please recycle.</p>
+<p>❌ Don't throw out anything in the toilet other than toilet paper.<br>No flushable wipes, cotton balls, dental floss, kitchen paper, facial tissue, condoms or sanitary pads. use the provided containers.<br>In case of clogging plumber service will be charged.</p>
+<p>❌ Do not try to force the keys in the doors locks. If the key doesn't turn or doesn't open the door, you are trying with the wrong key or in the wrong direction or you need to turn it again. Forcing a key can cause it to break off in the lock.<br>Locksmith service will be charged.</p>
+<p>Please keep the curtains open during the day and air out the apartment for at least 10 minutes daily to maintain fresh, dry air inside. It’s especially important to open the windows after taking a shower or when drying clothes or towels indoors to prevent excess humidity and mold</p>
+</div>
+
+
+<div class="grid"><div class="card"><b>Sleeping</b><p class="muted">King-size bed · large 210 × 140 cm sofa bed with topper · crib available.</p></div><div class="card"><b>Kitchen</b><p class="muted">Nespresso · milk frother · kettle · large fridge/freezer · microwave · electric oven · cookware · indoor & outdoor dining.</p></div><div class="card"><b>Bathroom</b><p class="muted">Bathtub with shower · shampoo, conditioner & shower gel · makeup mirror · towels: 1 large, 1 medium and 1 small per guest · 80 L water heater.</p></div><div class="card"><b>My little courtyard patio</b><p class="muted">A quiet place for morning coffee, reading or an evening aperitivo. Please keep voices low so everyone in the palazzo can relax.</p></div></div>
+<div class="card" style="text-align:center"><div class="eyebrow">From me to you</div><div class="big">I wish you a wonderful stay in Rome.</div><p class="muted">Thanks for your time.<br>— Edoardo</p></div>
+</section>
+
+<section class="page stack" id="guides">
+<div><div class="eyebrow">A few places I’d choose myself</div><h2>Edoardo’s personal picks</h2><p class="muted">These aren’t meant to replace my full Google Maps lists — they’re simply a few places I personally like depending on what you feel like eating.</p></div>
+<div class="concierge-divider">Eat like a local</div><div class="card"><div class="eyebrow">Breakfast & bakeries</div><div class="actions">
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Antico+Forno+Ai+Serpenti%2C+Via+dei+Serpenti+122%2C+Rome">Antico Forno Serpenti · traditional bakery</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=L%27Antico+Forno+di+Fontana+di+Trevi%2C+Via+delle+Muratte+8%2C+Rome">Antico Forno Trevi · near the fountain</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=LUNA+Caff%C3%A8+Specialty%2C+Via+delle+Quattro+Fontane+175%2C+Rome">LUNA · specialty coffee & viennoiserie</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Piccolo+Deroma%2C+Via+del+Lavatore+41%2C+Rome">Deroma · coffee & breakfast</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Antico+Forno+Roscioli%2C+Via+dei+Chiavari+34%2C+Roma">Roscioli · traditional forno</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Forno+Campo+de%27+Fiori%2C+Campo+de%27+Fiori+22%2C+Roma">Campo de’ Fiori · traditional forno</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Forno+Monteforte%2C+Via+del+Pellegrino+129%2C+Roma">Monteforte · traditional forno</a>
+</div></div>
+<div class="concierge-divider">Roman forno culture</div><div class="card">
+<div class="eyebrow">Traditional Roman bakeries</div>
+<div class="big">A Roman <i>forno</i> is more than a bakery</div>
+<p class="muted">In Rome, a traditional <i>forno</i> can be part bakery, part everyday lunch stop. Go in the morning for breads and something sweet, or come back around lunch for <b>pizza bianca, pizza rossa, pizza alla pala</b> and other savoury baked specialties. They’re one of my favourite ways to eat simply and locally while walking through the city.</p>
+<div class="actions">
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Antico+Forno+Roscioli%2C+Via+dei+Chiavari+34%2C+Roma">Antico Forno Roscioli</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Forno+Campo+de%27+Fiori%2C+Campo+de%27+Fiori+22%2C+Roma">Forno Campo de’ Fiori</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Forno+Monteforte%2C+Via+del+Pellegrino+129%2C+Roma">Forno Monteforte</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=La+Renella%2C+Via+del+Moro+15%2C+Roma">La Renella · Trastevere</a>
+</div>
+</div>
+<div class="card"><div class="eyebrow">Lunch · quick or Roman</div><div class="actions">
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=La+Prezzemolina%2C+Via+del+Colosseo+1%2C+Rome">La Prezzemolina · Roman pizza al taglio</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Forno+da+Milvio%2C+Via+dei+Serpenti+7%2C+Rome">Forno da Milvio · pizza & bakery</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Trattoria+il+Tettarello%2C+Via+dei+Capocci+4%2C+Rome">Tettarello · informal Roman trattoria</a>
+</div></div>
+<div class="card"><div class="eyebrow">Dinner</div><div class="actions">
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Baccano%2C+Via+delle+Muratte+23%2C+Rome">Baccano · polished dining near Trevi</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Piccolo+Arancio%2C+Vicolo+Scanderbeg+112%2C+Rome">Piccolo Arancio · very close to my home</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ristorante+Pancrazio%2C+Piazza+del+Biscione+92%2C+Rome">Pancrazio · historic Roman setting</a>
+</div></div>
+<div class="concierge-divider">Sit-down recommendations</div><div class="card">
+<div class="eyebrow">Roman lunch · selected addresses</div>
+<div class="big">Traditional, not tourist-menu Rome</div>
+<p class="muted">A few additional addresses I’d consider when you want proper Roman cooking rather than the usual tourist-centre menu.</p>
+<div class="actions">
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Cesare+al+Pellegrino%2C+Via+del+Pellegrino+117%2C+Roma">Cesare al Pellegrino · Roman trattoria</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Matricianella%2C+Via+del+Leone+4%2C+Roma">Matricianella · classic Roman cooking</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Armando+al+Pantheon%2C+Salita+dei+Crescenzi+31%2C+Roma">Armando al Pantheon · Roman institution</a>
+</div>
+</div>
+<div class="card">
+<div class="eyebrow">Dinner · worth your time</div>
+<div class="big">A little further, for a very Roman dinner</div>
+<p class="muted">These are places I’d look at when food is part of the evening itself and you don’t mind leaving the immediate Trevi area.</p>
+<div class="actions">
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=SantoPalato%2C+Piazza+Tarquinia+4+a%2Fb%2C+Roma">SantoPalato · contemporary Roman trattoria</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Trattoria+Pennestri%2C+Via+Giovanni+da+Empoli+5%2C+Roma">Pennestri · modern Roman cooking</a>
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Hosteria+Grappolo+d%27Oro%2C+Piazza+della+Cancelleria+80%2C+Roma">Grappolo d’Oro · Roman osteria</a>
+</div>
+</div>
+
+
+<div><div class="eyebrow">Curated by your host</div><h2>Edoardo's Rome</h2><p class="muted">My personal Google Maps collections for exploring Rome without spending your trip researching where to go.</p></div>
+<a class="card" style="display:block;text-decoration:none" target="_blank" rel="noopener" href="https://maps.app.goo.gl/MXfyFFmqYZebzgsN6?g_st=ac"><div class="eyebrow">Eat & drink</div><div class="big">Restaurants, Bakeries, Bars & Gelato →</div></a>
+<a class="card" style="display:block;text-decoration:none" target="_blank" rel="noopener" href="https://maps.app.goo.gl/xX1RwwhhVqw39txr7?g_st=ac"><div class="eyebrow">Discover</div><div class="big">Landmarks →</div></a>
+<a class="card" style="display:block;text-decoration:none" target="_blank" rel="noopener" href="https://maps.app.goo.gl/apQYdWnegv8CbWkw7?g_st=ac"><div class="eyebrow">Practical</div><div class="big">Utilities →</div></a>
+
+<div class="lux-section-break"><span>Rome essentials</span></div>
+<h2>Rome & Vatican essentials</h2></div>
+<div class="card"><div class="big">Vatican City</div><p class="muted"><b>St Peter's Basilica:</b> approximately 30–35 minutes on foot from the apartment, or walk to Barberini and take Metro A toward Battistini to Ottaviano, then continue on foot.</p><p class="muted"><b>Vatican Museums:</b> Metro A Barberini → Ottaviano, followed by a walk. For museum tickets, use the official Vatican Museums website whenever possible.</p><a class="btn" target="_blank" rel="noopener" href="https://www.museivaticani.va/">Official Vatican Museums</a></div>
+<div class="card stack">
+<div><b>💳 Cards & cash</b><p class="muted">Cards and contactless payments are widely used. A little euro cash can still be convenient.</p></div>
+<div><b>🔌 Electricity</b><p class="muted">Italy uses 230 V / 50 Hz. Check that US appliances support 230 V; a plug adapter alone does not convert voltage.</p></div>
+<div><b>💧 Water</b><p class="muted">Rome's public “nasoni” fountains provide drinking water; a refillable bottle is useful.</p></div>
+<div><b>🍽 Tipping</b><p class="muted">US-style 20% tipping is not expected. Rounding up or leaving a modest extra amount for good service is optional and appreciated.</p></div>
+<div><b>👜 Crowds</b><p class="muted">At stations, on public transport and around major attractions, keep phones and wallets secure and bags closed.</p></div>
+<div><b>⛪ Churches</b><p class="muted">Dress respectfully; major religious sites may enforce clothing and security requirements.</p></div>
+</div>
+
+
+<div class="lux-section-break"><span>Luggage & practical stops</span></div>
+<h2>Luggage storage close to my home</h2><p class="muted">Useful before check-in or after check-out. Opening hours, availability and prices can change, so please check online before going.</p></div>
+<div class="card"><div class="eyebrow">Very close</div><div class="big">Bounce · Near Trevi Fountain</div><p class="muted"><b>Via Santa Maria in Via 17, 00187 Roma</b><br>About 2 minutes from Trevi Fountain · currently 10:00–20:00 daily · from €3.50/day.</p><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="https://bounce.com/stores/rome/Bof1oi">Book Bounce</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Via+Santa+Maria+in+Via+17+Roma">Maps</a></div></div>
+<div class="card"><div class="eyebrow">Smart lockers</div><div class="big">Stow Your Bags · Piazza di Spagna</div><p class="muted"><b>Via della Vite 42, 00187 Roma</b><br>Automatic lockers · currently 07:00–23:00 daily · from €2.49. Online booking recommended.</p><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="https://www.stowyourbags.com/it/shop/roma/deposito-bagagli-piazza-di-spagna/">Book locker</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Via+della+Vite+42+Roma">Maps</a></div></div>
+<div class="card"><div class="eyebrow">Trevi / Santi Apostoli</div><div class="big">Bounce · Roma Trevi</div><p class="muted"><b>Piazza dei Santi Apostoli 56–59, 00187 Roma</b><br>Convenient for the Trevi / Via del Corso side of the neighbourhood. Check live opening hours and price when booking.</p><div class="actions"><a class="btn primary" target="_blank" rel="noopener" href="https://bounce.com/stores/rome/F5GT1w">Book Bounce</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Piazza+dei+Santi+Apostoli+56+Roma">Maps</a></div></div>
+<div class="card"><div class="eyebrow">Near my home</div><div class="big">Luggage Storage Trevi Fountain</div><p class="muted"><b>Via della Panetteria 5, 00187 Roma</b></p><div class="actions"><a class="btn" target="_blank" rel="noopener" href="https://www.turismoroma.it/en/hospitality/luggage-storage-trevi-fountain">Website</a><a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Via+della+Panetteria+5+Roma">Maps</a></div></div>
+
+
+<div class="lux-section-break"><span>Useful Rome etiquette</span></div>
+<div class="card"><div class="eyebrow">Paying & tipping</div><div class="big">A little different from the US</div>
+</section>
+
+
+
+
+
+<section class="page stack" id="stay"><div class="lux-intro"><div class="eyebrow">THE APARTMENT</div><h2>Everything in my home, explained</h2><p class="muted">Wi-Fi, hot water, electricity, washing machine and the practical things you may need during your stay.</p></div>
+<div class="lux-section-break"><span>Essentials</span></div>
+<div class="card"><div class="eyebrow">Hot water</div><div class="big">80 L electric storage water heater</div><p class="muted">Hot water is stored rather than produced endlessly on demand. After several long showers, the tank needs time to reheat. <b>Please do not press the middle wall switch in the bathroom</b>: it powers the water heater. If switched off, there will be no hot water.</p></div>
+<div class="notice"><div class="eyebrow">Please leave these cables connected</div><div class="big">Wi-Fi & home equipment</div>
+<div class="card"><div class="eyebrow">Using my home</div><div class="big">Washing machine</div><p class="muted">I made a short video so you can see exactly how to use the washing machine.</p><a class="btn primary" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1n9GXiTrZ-XZpcCry4KAIGxKzsMUdlzVU/view?usp=drivesdk">▶ Watch my video guide</a></div>
+
+<div class="lux-section-break"><span>Using the apartment</span></div>
+<div class="notice" style="border:1px solid #cdbb9c;background:#efe5d4"><div class="eyebrow">Important · Hot water</div><div class="big" style="margin-top:6px">Please leave the middle bathroom switch ON</div>
+
+<div><div class="eyebrow">Stay smart · live like a local</div><h2>Good to know in my Roman home</h2><p class="muted">A few practical things I’d tell a friend visiting Rome for the first time — especially if you’re coming from the United States.</p></div>
+<div class="grid">
+<div class="card"><div class="eyebrow">Electricity</div><div class="big">Italy uses 230 V</div><p class="muted">Italian sockets commonly use Type C, F and L plugs. A travel adapter changes the plug shape, but it does <b>not</b> convert voltage. Before plugging in a US appliance, check that its label says 100–240 V. Please never force a plug into a socket.</p></div>
+<div class="card"><div class="eyebrow">Power at home</div><div class="big">One high-power appliance at a time</div><p class="muted">Homes in Italy often have lower electrical capacity than US homes. Please avoid running several high-power appliances together — for example A/C + stove + hairdryer — as this can trip the power.</p></div>
+<div class="card"><div class="eyebrow">Water</div><div class="big">Rome’s tap water is drinkable</div><p class="muted">You can drink the tap water. Around Rome you’ll also see the small public drinking fountains known as <i>nasoni</i> — perfect for refilling your bottle.</p></div>
+<div class="card"><div class="eyebrow">Hot water</div><div class="big">The water heater has a tank</div><p class="muted">Hot water is not unlimited. Please leave the middle bathroom switch ON and allow the electric water heater time to recover after several long showers.</p></div>
+</div>
+
+<div class="card"><div class="eyebrow">Before you head out</div><div class="big">My 20-second home checklist</div><p>Take your keys and phone · turn off A/C or heating · turn off the stove, kitchen appliances and lights · never leave an appliance running unattended · close the apartment door and the building entrance behind you.</p></div>
+
+<p class="muted">Tipping in Italy is appreciated for excellent service but it is not expected at US percentages. A restaurant’s <i>coperto</i> is a cover charge, not a tip. Cards are widely accepted. If a card terminal or ATM asks whether to charge you in USD or EUR, choosing <b>EUR</b> generally lets your own card network handle the conversion instead of the merchant’s dynamic currency conversion.</p></div>
+
+<div class="card"><div class="eyebrow">Public transport</div><div class="big">Metro & bus made simple</div><p class="muted">The current ATAC BIT ticket is €1.50 and is valid for 100 minutes. You can also use contactless Tap & Go where available. If you use a paper ticket, validate it as required and keep it until the end of your journey.</p><a class="btn" target="_blank" rel="noopener" href="https://www.atac.roma.it/en/tickets-and-passes/">Official ATAC tickets</a></div>
+
+<div class="card"><div class="eyebrow">Rome without surprises</div><div class="big">A few local habits</div><p class="muted">Rome is best explored on foot, but watch for scooters and traffic when crossing. In crowded tourist areas and on public transport, keep your phone and wallet secure as you would in any major city. Carry a refillable bottle for the <i>nasoni</i>. Pharmacies are marked by a green cross; for a medical emergency call 112 or 118.</p></div>
+
+
+
+<div class="card"><div class="eyebrow">Official taxi fares from my area</div><div class="big">Know the fixed fare before you ride</div><p class="muted">My home is inside the Aurelian Walls. Current official fixed taxi fares are <b>€55 per vehicle to/from Fiumicino</b>, <b>€40 per vehicle to/from Ciampino</b>, and <b>€150 per vehicle to/from Civitavecchia Port</b> for the applicable direct routes. Use official white Rome taxis.</p><button class="btn primary" data-go="taxi">Arrival & Keys options</button></div>
+
+<p class="muted"><b>Check-out is by 11:00.</b> Before leaving, please check your belongings, leave the home tidy, make sure appliances/A/C/heating are off and follow the key instructions provided for your stay. Need to keep exploring? I’ve listed nearby luggage storage options. Flying home? Allow generous time for Rome traffic and airport procedures.</p><div class="actions"><button class="btn primary" data-go="checkout">Open full check-out guide</button><button class="btn" data-go="guides">Luggage storage</button><button class="btn" data-go="taxi">Arrival & Keys to airport</button></div></div>
+</section><section class="page stack" id="help">
+<div><div class="eyebrow">Safety & departure</div><h2>Help when you need it</h2></div>
+<div class="grid">
+<div class="notice">
+<div class="eyebrow">Emergency · save this</div>
+<div class="big">Help at a glance</div>
+<div class="actions">
+<a class="btn primary" href="tel:112">112 · Emergency</a>
+<a class="btn" href="tel:115">115 · Fire brigade</a>
+<a class="btn" href="tel:118">118 · Ambulance</a>
+<a class="btn" href="tel:+393338787929">Edoardo</a>
+<a class="btn" target="_blank" rel="noopener" href="https://wa.me/393338787929">WhatsApp Edoardo</a>
+</div>
+<p class="muted" style="margin-top:14px"><b>My home:</b> Vicolo Scanderbeg 43, 00187 Roma, Italy</p>
+</div>
+<div class="card">
+<div class="eyebrow">Night pharmacy · nearby</div>
+<div class="big">Farmacia Internazionale Barberini</div>
+<p class="muted"><b>Piazza Barberini 49, 00187 Roma</b><br>One of the closest pharmacies offering night-service in the Trevi/Barberini area. Night access and opening arrangements can vary, so I recommend calling before walking there late at night.</p>
+<div class="actions">
+<a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Farmacia+Internazionale+Barberini%2C+Piazza+Barberini+49%2C+00187+Roma">Open in Google Maps</a>
+<a class="btn" href="tel:+39064871195">Call +39 06 487 1195</a>
+</div>
+<p class="muted" style="font-size:12px;margin-top:12px">For a serious or urgent medical emergency, call 112 or 118 rather than going to a pharmacy.</p>
+</div>
+
+<div class="card"><div class="eyebrow">My contact</div><div class="big">Edoardo</div><p class="muted">For anything related to my home during your stay, you can contact me directly.</p><div class="actions"><a class="btn primary" href="tel:+393338787929">Call +39 333 878 7929</a><a class="btn" target="_blank" rel="noopener" href="https://wa.me/393338787929">WhatsApp Edoardo</a></div></div>
+</div>
+</section>
+
+<section class="page stack" id="checkout">
+<div><div class="eyebrow">Before you leave</div><h2>Check-out made easy</h2><p class="muted">I hope you’ve had a wonderful stay in Rome. Before you go, here’s everything you need in one place.</p></div>
+
+<div class="card" style="text-align:center">
+<div class="eyebrow">Check-out time</div>
+<div class="big" style="font-size:38px">By 11:00</div>
+<p class="muted">Please have the apartment ready for departure by 11:00.</p>
+</div>
+
+<div class="concierge-divider">Leaving the home</div><div class="card">
+<div class="eyebrow">Keys · very important</div>
+<div class="big">Leave both sets on the table</div>
+<p>Please leave <b>both complete sets of keys on the table inside the apartment</b> before you leave.</p>
+<p class="muted">You do <b>not</b> need any keys to exit the building or condominium. Once both sets are on the table, simply leave the apartment and <b>close the apartment door behind you</b> as you go.</p>
+<div class="notice" style="margin-top:14px"><b>Before closing the door:</b> make sure you have your phone, passport, wallet, luggage and all personal belongings with you. Once the door closes, the keys will be inside.</div>
+</div>
+
+<div class="card">
+<div class="eyebrow">My quick departure checklist</div>
+<div class="rule"><span class="dot"></span><div>Leave <b>both sets of keys</b> on the table.</div></div>
+<div class="rule"><span class="dot"></span><div>Take all personal belongings, passports, chargers and valuables.</div></div>
+<div class="rule"><span class="dot"></span><div>Turn off <b>A/C or heating, lights, stove and all appliances</b>.</div></div>
+<div class="rule"><span class="dot"></span><div>Do not leave any device running unattended.</div></div>
+<div class="rule"><span class="dot"></span><div>Leave used dishes and the kitchen in a reasonable, tidy condition.</div></div>
+<div class="rule"><span class="dot"></span><div>Check that no food has been left around the apartment.</div></div>
+<div class="rule"><span class="dot"></span><div>Close the apartment door behind you. <b>No key is needed to leave the palazzo.</b></div></div>
+</div>
+
+<div class="grid">
+<div class="card"><div class="eyebrow">Leaving Rome later?</div><div class="big">Store your luggage nearby</div><p class="muted">You can keep enjoying the historic centre after check-out. I’ve listed convenient luggage-storage options close to my home.</p><button class="btn primary" data-go="guides">Nearby luggage storage</button></div>
+<div class="card"><div class="eyebrow">Airport or port</div><div class="big">Plan your departure</div><p class="muted">Allow generous time for Rome traffic, station transfers and airport or port procedures. My Getting Around and Arrival & Keys sections have the routes and transport options from the apartment.</p><div class="actions"><button class="btn" data-go="travel">Getting Around options</button><button class="btn primary" data-go="taxi">Get a taxi</button></div></div>
+</div>
+
+<div class="card"><div class="eyebrow">Need me?</div><div class="big">Edoardo</div><p class="muted">If you have any doubt before leaving, contact me rather than guessing.</p><a class="btn primary" href="tel:+393338787929">Call +39 333 878 7929</a></div>
+
+<div class="card" style="text-align:center"><div class="eyebrow">One last thing</div><div class="big serif" style="font-size:28px">Thank you for staying in my home.</div><p class="muted">I hope Rome has given you a reason to come back.</p><div class="actions" style="justify-content:center"><button class="btn" data-go="checkout">Leave a Google review</button><button class="btn primary" data-go="book">Come back to Rome</button></div></div>
+
+<div class="lux-section-break"><span>One last thing</span></div>
+
+<div class="card review" style="padding:clamp(28px,5vw,46px) clamp(20px,4vw,36px)">
+<div class="eyebrow">A small favour from me</div>
+<div class="stars" aria-label="Five stars">★★★★★</div>
+<div class="big serif" style="font-size:clamp(30px,5vw,42px);margin-top:8px">Enjoyed your stay?</div>
+<p class="muted" style="max-width:610px;margin:14px auto 22px">If you enjoyed your time in my home, a Google review would mean a lot to me. It helps future guests discover my little home in Rome.</p>
+<p class="muted" style="margin-top:-8px">— Edoardo</p>
+<a class="btn primary" target="_blank" rel="noopener" href="https://g.page/r/CS7Cc1gRHt3sEBI/review">Leave a Google Review</a>
+</div>
+
+
+<div class="lux-section-break"><span>Departure</span></div>
+<div class="card"><div class="eyebrow">Before you leave</div><div class="big">Departure made easy</div>
+</section>
+
+<section class="page stack" id="book">
+<div class="card" style="text-align:center;padding:30px 22px">
+<div class="eyebrow">Come back to Rome</div>
+<div class="big serif" style="font-size:30px;margin-top:8px">My home will be here for you.</div>
+<p class="muted" style="max-width:580px;margin:12px auto 20px">If you’d like to stay in my home again, you can book your next visit directly through my website.</p>
+<a class="btn primary" target="_blank" rel="noopener" href="https://myromeyourhome.com/">Book directly with me</a>
+<p class="muted" style="font-size:12px;margin-top:12px">My Rome Your Home · Trevi, Rome</p>
+</div>
+</section>
+<div style="height:1px;background:linear-gradient(90deg,transparent,var(--line),transparent);margin:32px 0 0"></div><footer><span>MY ROME YOUR HOME · TREVI · ROMA</span><a target="_blank" rel="noopener" href="https://myromeyourhome.com/">myromeyourhome.com</a></footer>
+</main>
+<button class="guide-menu-fab" id="guideMenuFab" type="button" aria-label="Show all guide sections">☰ Concierge <span>menu</span></button>
+<script>
+(()=>{const app=document.getElementById('app'),pages=[...app.querySelectorAll('.page')],nav=[...app.querySelectorAll('.nav')];
+function show(id){
+ pages.forEach(p=>p.classList.toggle('active',p.id===id));
+ nav.forEach(b=>b.classList.toggle('active',b.dataset.page===id));
+ requestAnimationFrame(()=>{
+  const t=document.getElementById(id);
+  const desktop=window.matchMedia('(min-width:761px)').matches;
+  const y=t.getBoundingClientRect().top+window.scrollY-(desktop?18:12);
+  window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
+ });
+}
+nav.forEach(b=>b.addEventListener('click',()=>show(b.dataset.page)));
+document.querySelectorAll('[data-go]').forEach(b=>b.addEventListener('click',()=>show(b.dataset.go)));
+document.querySelectorAll('[data-quick="wifi"]').forEach(b=>b.addEventListener('click',async()=>{const t='Fontane43';try{await navigator.clipboard.writeText(t)}catch(e){} const w=document.getElementById('copywifi'); if(w){w.scrollIntoView({behavior:'smooth',block:'center'}); const m=document.getElementById('wificopied'); if(m)m.textContent='Wi-Fi: Domus Fontane · Password copied: Fontane43';}}));app.querySelectorAll('.jump').forEach(b=>b.addEventListener('click',()=>show(b.dataset.page)));
+document.getElementById('copy').addEventListener('click',async()=>{const t='Vicolo Scanderbeg 43, 00187 Roma, Italy',s=document.getElementById('copied');try{await navigator.clipboard.writeText(t);s.textContent='Address copied.'}catch(e){s.textContent=t}});
+
+document.getElementById('copywifi')?.addEventListener('click',async()=>{const t='Fontane43',m=document.getElementById('wificopied');try{await navigator.clipboard.writeText(t);m.textContent='Wi-Fi password copied.'}catch(e){m.textContent='Password: '+t}});
+
+const weatherText=c=>({0:'Clear sky',1:'Mostly clear',2:'Partly cloudy',3:'Overcast',45:'Foggy',48:'Foggy',51:'Light drizzle',53:'Drizzle',55:'Heavy drizzle',61:'Light rain',63:'Rain',65:'Heavy rain',71:'Light snow',73:'Snow',75:'Heavy snow',80:'Rain showers',81:'Rain showers',82:'Heavy showers',95:'Thunderstorms',96:'Thunderstorms',99:'Thunderstorms'})[c]||'Mixed conditions';
+
+async function loadRomeWeather(){
+ const status=document.getElementById('weather-status');
+ try{
+ const url='https://api.open-meteo.com/v1/forecast?latitude=41.9028&longitude=12.4964&current=temperature_2m,weather_code&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max&timezone=Europe%2FRome&forecast_days=2';
+ const r=await fetch(url,{cache:'no-store'});
+ if(!r.ok) throw new Error('Weather request failed');
+ const d=await r.json(),q=d.daily;
+ const now=Math.round(d.current.temperature_2m);
+ document.getElementById('weather-today').textContent=`${now}° · ${weatherText(q.weather_code[0])}`;
+ document.getElementById('weather-today-detail').textContent=`Low ${Math.round(q.temperature_2m_min[0])}° · High ${Math.round(q.temperature_2m_max[0])}° · Rain ${q.precipitation_probability_max[0] ?? 0}%`;
+ document.getElementById('weather-tomorrow').textContent=weatherText(q.weather_code[1]);
+ document.getElementById('weather-tomorrow-detail').textContent=`Low ${Math.round(q.temperature_2m_min[1])}° · High ${Math.round(q.temperature_2m_max[1])}° · Rain ${q.precipitation_probability_max[1] ?? 0}%`;
+ const rain=q.precipitation_probability_max[0] ?? 0;
+ status.textContent=rain>=50?'I’d take an umbrella with you today.':rain>=25?'A small umbrella may be useful today.':'A good day to explore Rome on foot.';
+ }catch(e){
+ status.textContent='Live forecast temporarily unavailable. Tap to check Rome weather.';
+ status.innerHTML='Live forecast temporarily unavailable. <a target="_blank" rel="noopener" href="https://www.google.com/search?q=Rome+weather+today">Check Rome weather</a>.';
+ }
+}
+loadRomeWeather();
+
+const menuFab=document.getElementById('guideMenuFab');
+menuFab?.addEventListener('click',()=>{
+  const n=app.querySelector('nav');
+  n?.scrollIntoView({behavior:'smooth',block:'start'});
+});
+})();
+</script>
+</body></html>
