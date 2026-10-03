@@ -1,0 +1,47 @@
+name: Refresh Rome guide
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: '17 */3 * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install beautifulsoup4==4.13.4
+      - name: Check official tourism listings
+        id: refresh
+        continue-on-error: true
+        run: python scripts/update_rome.py
+      - name: Prepare public guide only
+        run: |
+          mkdir -p public/data
+          cp index.html CNAME public/
+          cp data/rome-today.json public/data/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+      - name: Publish refreshed guide
+        id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Report unavailable source
+        if: steps.refresh.outcome == 'failure'
+        run: |
+          echo 'Official source could not be refreshed. The guide uses safe fallback links.'
+          exit 1
