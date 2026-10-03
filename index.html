@@ -651,6 +651,18 @@ footer{border-top-color:rgba(177,138,82,.20)}
 #rome-weather .muted{font-size:10px;line-height:1.45}#weather-status{margin:5px 0 9px}
 .venue-list{display:grid;gap:0}.venue-entry{padding:15px 0;border-top:1px solid var(--line)}.venue-entry:first-child{border-top:0}.venue-entry p{margin:5px 0 9px}.venue-entry h3{font:500 23px/1.2 Georgia,serif;margin:0}.venue-entry .btn{min-height:36px;font-size:12px}
 @media(max-width:760px){.hero{display:flex;flex-direction:column}.hero>.home-weather-dock{position:static;width:100%;order:3;margin:8px 0 15px}.hero>.eyebrow{order:0}.hero>h1{order:1}.hero>.lead{order:2}.hero>.card{order:4}.hero>.eyebrow,.hero>h1,.hero>.lead{max-width:100%}#rome-weather .grid.mobile2{grid-template-columns:1fr 1fr}#rome-weather .card .big{font-size:15px!important}}
+
+/* Compact official-source city bulletin */
+#rome-today{margin-top:10px;padding:14px 16px;border-radius:20px}
+#rome-today h2{font:500 22px/1.15 Georgia,serif;margin:6px 0 8px}
+#rome-today .city-status,#rome-today .city-note{font-size:10px;line-height:1.5;color:var(--muted);margin:7px 0}
+.city-item{display:block;padding:9px 0;border-top:1px solid var(--line);text-decoration:none}
+.city-item strong{display:block;font-size:12px;line-height:1.4;font-weight:650}
+.city-item small{display:block;font-size:10px;color:var(--muted);margin-top:3px}
+.city-links{display:flex;flex-wrap:wrap;gap:7px 14px;padding-top:8px;border-top:1px solid var(--line);font-size:11px}
+.city-links a{text-underline-offset:3px}.city-item:hover strong{text-decoration:underline;text-underline-offset:3px}
+/* Keep the taller weather + city dock from overlapping the address card. */
+@media(min-width:761px){.hero>.card{max-width:calc(100% - 330px)}}
 </style>
 </head>
 <body>
@@ -664,7 +676,15 @@ footer{border-top-color:rgba(177,138,82,.20)}
 <div class="card" style="box-shadow:none"><div class="eyebrow">Tomorrow</div><div class="big" id="weather-tomorrow">—</div><div class="muted" id="weather-tomorrow-detail">—</div></div>
 </div>
 <p class="muted" style="font-size:11px;margin-top:12px">Rome · °C &amp; °F · <a href="https://open-meteo.com/" rel="noopener" target="_blank">Weather data by Open-Meteo</a></p>
-</div></div>
+</div>
+<section class="card" id="rome-today" aria-labelledby="city-title">
+<div class="eyebrow">The city, at a glance</div>
+<h2 id="city-title">Today in Rome</h2>
+<p class="city-status" id="city-status" aria-live="polite">Checking official event listings…</p>
+<div id="city-events"></div>
+<div class="city-links"><a href="https://www.turismoroma.it/en/romalive" target="_blank" rel="noopener">Official event calendar ↗</a><a href="https://www.atac.roma.it/stato-del-servizio" target="_blank" rel="noopener">Live transport status ↗</a></div>
+<p class="city-note">Turismo Roma · ATAC. Check the official page for opening days, times, tickets and last-minute changes.</p>
+</section></div>
 <div class="eyebrow">Private digital concierge · Roma</div>
 <h1 class="serif">My Rome<br/><em>Your Home</em></h1>
 <p class="lead">Welcome to my home in the heart of Rome. I made this private guide for you — everything you need for the apartment, getting around, eating well and enjoying the city without wasting time researching.</p>
@@ -1059,4 +1079,36 @@ document.addEventListener('click', function(e){
     }
   });
 })();
-</script></body></html>
+</script>
+<script>
+(()=>{
+ const status=document.getElementById('city-status'),list=document.getElementById('city-events');
+ const today=()=>{const parts=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Rome',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const get=t=>parts.find(p=>p.type===t).value;return get('year')+'-'+get('month')+'-'+get('day');};
+ let busy=false;
+ async function refreshCity(){
+  if(busy)return;busy=true;
+  try{
+   const r=await fetch('data/rome-today.json?t='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(7000)});
+   if(!r.ok)throw new Error('Unavailable');
+   const d=await r.json(),age=Date.now()-Date.parse(d.checkedAt);
+   if(!d.sourceAvailable||!Number.isFinite(age)||age>12*3600000||age< -300000)throw new Error('Outdated');
+   const current=today(),tomorrow=new Date(Date.parse(current+'T12:00:00Z')+86400000).toISOString().slice(0,10);
+   const events=(Array.isArray(d.events)?d.events:[]).filter(e=>/^\d{4}-\d{2}-\d{2}$/.test(e.start)&&/^\d{4}-\d{2}-\d{2}$/.test(e.end)&&e.end>=current&&e.start<=tomorrow).slice(0,3);
+   list.replaceChildren();
+   for(const e of events){
+    const u=new URL(e.url);if(u.protocol!=='https:'||u.hostname!=='www.turismoroma.it')continue;
+    const a=document.createElement('a');a.className='city-item';a.href=u.href;a.target='_blank';a.rel='noopener';
+    const title=document.createElement('strong');title.textContent=e.title;
+    const meta=document.createElement('small');const dateLabel=v=>new Intl.DateTimeFormat('en-GB',{day:'numeric',month:'short',timeZone:'UTC'}).format(new Date(v+'T12:00:00Z'));meta.textContent=(e.start===e.end?dateLabel(e.start):dateLabel(e.start)+' – '+dateLabel(e.end))+' · Turismo Roma';
+    a.append(title,meta);list.append(a);
+   }
+   const checked=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Rome',day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}).format(new Date(d.checkedAt));
+   status.textContent=(list.children.length?'Official listings checked ':'See the official calendar for today’s events. Last checked ')+checked+' · Rome time';
+  }catch(e){list.replaceChildren();status.textContent='Fresh event listings unavailable. Use the official links below.';}
+  finally{busy=false;}
+ }
+ refreshCity();setInterval(refreshCity,15*60000);
+ document.addEventListener('visibilitychange',()=>{if(!document.hidden)refreshCity();});
+})();
+</script>
+</body></html>
