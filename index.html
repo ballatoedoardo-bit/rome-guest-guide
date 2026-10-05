@@ -680,6 +680,9 @@ footer{border-top-color:rgba(177,138,82,.20)}
 /* Keep section navigation aligned with the first instruction. */
 body{overflow-anchor:none}
 .page{scroll-margin-top:18px}
+.page.active{animation:guideFade .25s ease}
+@keyframes guideFade{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.page.active{animation:none}}
 </style>
 </head>
 <body>
@@ -752,7 +755,7 @@ body{overflow-anchor:none}
 <p class="serif" style="font-size:21px">“Per favore, mi porti a Vicolo Scanderbeg 43.”</p>
 <div class="actions"><a class="btn primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=Vicolo+Scanderbeg+43,+00187+Roma" rel="noopener" target="_blank">Directions home</a></div>
 </div>
-<div class="card"><div class="eyebrow">Quick actions</div><div class="big">Everything you may need in a few seconds</div><div class="actions" style="margin-top:14px"><button class="btn" data-go="stay" data-quick="wifi">Wi-Fi</button><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Vicolo+Scanderbeg+43,+00187+Roma" rel="noopener" target="_blank">Get home</a><button class="btn primary" data-anchor="taxi-services" data-go="travel">Get a taxi</button><button class="btn" data-go="help" type="button">Help &amp; emergencies</button></div></div><div class="card"><div class="eyebrow">A nearby gem</div><div class="big">Don’t overlook Palazzo Colonna</div><p class="muted">A magnificent Baroque gallery, just a short walk from my home. A beautiful addition to a Friday or Saturday morning in Rome.</p><button class="btn" data-go="guides" data-anchor="palazzo-colonna">Discover Palazzo Colonna</button></div><div class="notice"><div class="eyebrow">A note from your host</div><p class="big" style="margin:7px 0">Benvenuti a Roma.</p><span class="muted">I take great care of this home, and respectful travellers are always welcome. I hope you feel at home here and enjoy Rome as much as I do. — Edoardo</span></div>
+<div class="card"><div class="eyebrow">Quick actions</div><div class="big">Everything you may need in a few seconds</div><div class="actions" style="margin-top:14px"><button class="btn" data-quick="wifi">Wi-Fi</button><a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Vicolo+Scanderbeg+43,+00187+Roma" rel="noopener" target="_blank">Get home</a><button class="btn primary" data-anchor="taxi-services" data-go="travel">Get a taxi</button><button class="btn" data-go="help" type="button">Help &amp; emergencies</button></div></div><div class="card"><div class="eyebrow">A nearby gem</div><div class="big">Don’t overlook Palazzo Colonna</div><p class="muted">A magnificent Baroque gallery, just a short walk from my home. A beautiful addition to a Friday or Saturday morning in Rome.</p><button class="btn" data-go="guides" data-anchor="palazzo-colonna">Discover Palazzo Colonna</button></div><div class="notice"><div class="eyebrow">A note from your host</div><p class="big" style="margin:7px 0">Benvenuti a Roma.</p><span class="muted">I take great care of this home, and respectful travellers are always welcome. I hope you feel at home here and enjoy Rome as much as I do. — Edoardo</span></div>
 </section>
 <section class="page stack" id="travel">
 <div><div class="eyebrow">Door-to-door travel</div><h2>Airports, Termini &amp; Civitavecchia</h2><p class="muted">Use official white taxis from designated ranks. Fixed fares are for eligible direct journeys between the listed airport/port and addresses within the Aurelian Walls.</p></div>
@@ -901,8 +904,8 @@ body{overflow-anchor:none}
 <div class="card"><div class="eyebrow">Near my home</div><div class="big">Luggage Storage Trevi Fountain</div><p class="muted"><b>Via della Panetteria 5, 00187 Roma</b></p><div class="actions"><a class="btn" href="https://www.turismoroma.it/en/hospitality/luggage-storage-trevi-fountain" rel="noopener" target="_blank">Website</a><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Via+della+Panetteria+5+Roma" rel="noopener" target="_blank">Maps</a></div></div>
 
 <div class="concierge-divider">Everyday essentials nearby</div>
-<div><div class="eyebrow">Around the corner</div><h2>Useful places close to home</h2></div>
-<div class="grid" id="nearby-essentials">
+<div id="nearby-essentials"><div class="eyebrow">Around the corner</div><h2>Useful places close to home</h2></div>
+<div class="grid">
 <div class="card"><div class="eyebrow">Closest supermarket · your host’s pick</div><div class="big">Tigre</div><p class="muted"><b>Via del Traforo 143, Roma</b><br/>A convenient stop for groceries, breakfast supplies and everyday essentials. Check the current opening hours before heading out.</p><a class="btn primary" href="https://www.google.com/maps/search/?api=1&amp;query=Supermercato+Tigre+Via+del+Traforo+143+Roma" target="_blank" rel="noopener">Open in Google Maps</a></div>
 <div class="card"><div class="eyebrow">Closest pharmacy</div><div class="big">Antica Farmacia Pesci</div><p class="muted"><b>Piazza di Trevi 89, Roma</b><br/>Beside the Trevi Fountain, a short walk from the apartment. Check current opening hours before visiting.</p><div class="actions"><a class="btn primary" href="https://maps.app.goo.gl/XDPF2RtPQ8eXmfuA6" target="_blank" rel="noopener">Open in Google Maps</a><a class="btn" href="https://anticafarmaciapesci.it/en/contacts/" target="_blank" rel="noopener">Pharmacy website</a></div></div>
 </div>
@@ -1025,16 +1028,19 @@ body{overflow-anchor:none}
 <button aria-label="Show all guide sections" class="guide-menu-fab" id="guideMenuFab" type="button">☰ Concierge <span>menu</span></button>
 <script>
 (()=>{const app=document.getElementById('app'),pages=[...app.querySelectorAll('.page')],nav=[...app.querySelectorAll('.nav')];
+let navigationVersion=0;
 function show(id,anchor){
+ const version=++navigationVersion;
  const target=document.getElementById(id);
  if(!target)return;
  pages.forEach(p=>p.classList.toggle('active',p.id===id));
  nav.forEach(b=>b.classList.toggle('active',b.dataset.page===id));
  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+  if(version!==navigationVersion)return;
   const dest=anchor?document.getElementById(anchor):target;
   if(!dest)return;
   const y=dest.getBoundingClientRect().top+window.scrollY-18;
-  window.scrollTo({top:Math.max(0,y),behavior:'smooth'});
+  window.scrollTo({top:Math.max(0,y),behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
  }));
 }
 function goAndAnchor(page,anchor){show(page,anchor);}
