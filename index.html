@@ -763,13 +763,110 @@ details>summary:focus-visible{outline:2px solid var(--brass);outline-offset:-4px
 @media(max-width:600px){nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
 
+
+/* My Rome Your Home — companion concierge edition. */
+:root{--ivory:#f7f4ee;--paper:#fffdf9;--ink:#26382f;--muted:#62665f;--line:#d9d5cb;--brass:#8c4e3c;--brass-deep:#8c4e3c;--dark:#26382f;--radius:0px}
+body{background:var(--ivory);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:15px;line-height:1.7}
+::selection{background:#e4cfc1;color:var(--ink)}
+.wrap{width:min(1280px,100%);max-width:1280px;padding:0 clamp(22px,5vw,64px) 80px}
+.guide-brand{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:94px;border-bottom:1px solid var(--line)}
+.guide-brand>a{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.guide-monogram{width:37px;height:46px;border:1px solid var(--brass);border-radius:50% 50% 0 0;display:grid;place-items:center;font:italic 31px Georgia,serif;color:var(--brass)}
+.guide-wordmark{font:22px/.95 Georgia,serif;letter-spacing:-.05em}
+.guide-brand>span{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--brass);text-align:right}
+.hero{display:block;padding:42px 0 30px;border-bottom:0;background:none;border-radius:0;box-shadow:none}
+.hero:before,.hero:after{display:none}
+.concierge-cover{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:64px;margin-bottom:34px}
+.hero .eyebrow{font-size:10px;letter-spacing:.2em;font-weight:500;color:var(--brass)}
+.hero h1{font:400 clamp(62px,7.2vw,94px)/.98 Georgia,serif;letter-spacing:-.065em;max-width:none;margin:22px 0 26px}
+.hero h1 em{color:var(--brass-deep);font-weight:400}
+.hero .lead{font-size:16px;line-height:1.85;max-width:42ch;margin:0;color:var(--muted)}
+.concierge-photo{position:relative;margin:0;min-width:0}
+.concierge-photo img{display:block;width:100%;height:430px;object-fit:cover;object-position:60% center}
+.concierge-photo figcaption{position:absolute;bottom:18px;left:18px;right:18px;background:var(--paper);padding:14px 18px;font-size:11px;color:var(--ink)}
+.arrival-tools{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.hero .arrival-tools>.card{max-width:none!important;width:100%;margin:0!important;padding:24px;background:#edeae2;border:0;border-radius:0;box-shadow:none}
+.hero .arrival-tools .big{font-size:27px}
+.card,details.card,.notice,.ra-concierge{border-radius:0!important;box-shadow:none!important;background:var(--paper);border-color:var(--line)}
+.card{padding:28px}
+.card:hover{transform:none!important;box-shadow:none!important}
+.notice{background:#e9ebe2;border-left:2px solid var(--brass);padding:28px}
+.big,.serif,h2,h3,h4,.topic-heading{font-family:Georgia,"Times New Roman",serif;font-weight:400;letter-spacing:-.035em}
+.eyebrow{font-size:10px;letter-spacing:.18em;font-weight:500;color:var(--brass)}
+.btn,.section-pill{border-radius:0!important;box-shadow:none;min-height:44px;font-size:12px;font-weight:500;border-color:#b7b5a9;letter-spacing:.015em;background:transparent;color:var(--ink)}
+.btn.primary{background:var(--dark);color:#fffdf9;border-color:var(--dark)}
+.home-weather-dock{position:static!important;width:100%!important;margin:0 0 38px!important;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start}
+.home-weather-dock>.guide-chapter-heading,.home-weather-dock>nav{grid-column:1/-1}
+.guide-chapter-heading{display:flex;align-items:baseline;justify-content:space-between;border-top:1px solid var(--line);padding-top:23px;margin:0}
+.guide-chapter-heading h2{font:400 28px/1.2 Georgia,serif;margin:0;letter-spacing:-.035em}
+.guide-chapter-heading p{margin:0;color:var(--muted);font-size:11px}
+.home-weather-dock>nav{display:grid;position:static;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:0!important;padding:0;background:none;backdrop-filter:none;border:0;box-shadow:none;width:100%;overflow:visible}
+.nav{min-width:0!important;min-height:79px;padding:14px 12px;border-radius:0!important;background:transparent;border:1px solid var(--line);box-shadow:none;text-align:left;transform:none!important}
+.nav b{font-size:12px;font-weight:500;gap:8px;color:inherit}
+.nav small{font-size:10px;color:var(--muted);margin-top:6px}
+.nav.active{background:var(--dark);color:#fffdf9;border-color:var(--dark)}
+.nav.active small{color:#e0e3db}
+.nav.active:after{display:none}
+.nav .icon{width:17px;height:17px;flex-shrink:0}
+#rome-weather,#rome-today{margin:0!important;width:100%;min-width:0;background:transparent;border:0;border-top:1px solid var(--line);padding:24px 0 0;border-radius:0!important;box-shadow:none}
+#rome-weather .big,#rome-today h2{font-size:29px!important}
+#rome-weather>.grid{gap:20px}
+#rome-weather .grid>.card{background:#edeae2;border:0;padding:17px}
+#rome-weather .grid .big{font:400 18px/1.4 Georgia,serif!important}
+#rome-weather .muted,#rome-today p{font-size:12px;line-height:1.7}
+#rome-today h2{margin-top:8px}
+.city-links a,.city-local-links a{border-radius:0!important;background:transparent!important;font-size:11px}
+.page{max-width:none!important;padding:32px 0 0;scroll-margin-top:22px}
+.page.active{display:grid;gap:20px!important;animation:none}
+.page h2{font-size:clamp(32px,4.3vw,48px);line-height:1.12;letter-spacing:-.045em}
+.page>div:first-child:not(.card)>.eyebrow{margin-bottom:13px}
+.page p{line-height:1.8}
+.page>.card{padding:30px}
+.stack>*+*{margin-top:0}
+.grid,.grid3{gap:20px}
+.venue-entry{padding-block:25px;border-color:var(--line)}
+.venue-entry h3{font-size:28px}
+.section-index{padding:22px 0 28px}
+.section-pill{padding:10px 15px}
+.topic-heading{font-size:23px}
+details>summary{min-height:48px}
+details.card summary,details.compact-details>summary{font-family:Georgia,serif;font-size:25px!important;padding:24px!important;letter-spacing:-.035em}
+details>summary:focus-visible{border-radius:0;outline:2px solid var(--brass)}
+.compact-details>.detail-body{padding:0 24px 24px!important}
+.guide-menu-fab{background:var(--dark);color:#fffdf9;border-radius:0!important;border:1px solid #f7f4ee;box-shadow:0 4px 18px #26382f26;font-size:12px;padding:14px 19px;min-height:48px}
+.guide-skip{position:absolute;left:20px;top:-100px;padding:12px 18px;background:var(--paper);z-index:100;color:var(--ink)}
+.guide-skip:focus{top:10px}
+:where(a,button,summary):focus-visible{outline:2px solid var(--brass);outline-offset:4px}
+@media(hover:hover){.nav:not(.active):hover,.btn:not(.primary):hover,.section-pill:hover{background:#e9ebe2}.btn.primary:hover{background:#3b5144}}
+@media(max-width:900px){.concierge-cover{gap:32px}.concierge-photo img{height:390px}.home-weather-dock>nav{grid-template-columns:repeat(5,minmax(0,1fr))}.nav{padding:12px 9px}.nav b{font-size:11px;gap:5px}.nav small{font-size:9px}}
+@media(max-width:760px){.wrap{padding:0 22px 95px}.guide-brand{min-height:78px}.guide-wordmark{font-size:20px}.guide-brand>span{font-size:8px;max-width:14ch}.hero{padding-top:30px}.concierge-cover{grid-template-columns:1fr;gap:28px;margin-bottom:24px}.hero h1{font-size:clamp(58px,14vw,78px);margin:18px 0 20px}.hero .lead{font-size:15px;max-width:50ch}.concierge-photo img{height:290px}.arrival-tools{grid-template-columns:1fr;gap:12px}.hero .arrival-tools>.card{padding:22px}.home-weather-dock{grid-template-columns:1fr;gap:22px}.home-weather-dock>nav{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible}.nav{padding:12px;min-height:75px}.nav b{font-size:12px;gap:8px}.nav small{font-size:10px}.guide-chapter-heading{align-items:start;gap:15px}.guide-chapter-heading h2{font-size:26px}.guide-chapter-heading p{max-width:15ch;text-align:right}#rome-weather,#rome-today{grid-column:1}.page{padding-top:15px}.page.active{gap:16px!important}.page>.card,.card{padding:22px}.page h2{font-size:35px}.grid,.grid3{gap:14px}.hero .arrival-tools .big{font-size:25px}.venue-entry h3{font-size:26px}.guide-menu-fab{right:18px;bottom:calc(16px + env(safe-area-inset-bottom))}.home-weather-dock>nav{scroll-margin-top:15px}}
+@media(max-width:360px){.wrap{padding-inline:16px}.hero h1{font-size:55px}.nav{padding:11px 9px}.nav b{font-size:11px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
+
 </style>
 </head>
 <body>
 <main class="wrap" id="app">
-<header class="hero"><div class="home-weather-dock"><div class="card" id="rome-weather">
+<a class="guide-skip" href="#guide-chapters">Skip to guide chapters</a><div class="guide-brand"><a href="https://www.myromeyourhome.com/" aria-label="My Rome Your Home website"><span class="guide-monogram" aria-hidden="true">R</span><span class="guide-wordmark">My Rome<br>Your Home</span></a><span>Your personal<br>Rome companion</span></div><header class="hero"><div class="concierge-cover"><div><div class="eyebrow">Private digital concierge · Roma</div>
+<h1 class="serif">My Rome<br><em>Your Home</em></h1>
+<p class="lead">Welcome to my home in the heart of Rome. I made this private guide for you — everything you need for the apartment, getting around, eating well and enjoying the city without wasting time researching.</p>
+</div><figure class="concierge-photo"><img src="https://www.myromeyourhome.com/wp-content/uploads/2026/10/vicolo-scanderberg-roma-73-1024x683.jpg" alt="Your home in the heart of Trevi." width="1024" height="683" loading="eager" decoding="async"><figcaption>Your home in the heart of Trevi.</figcaption></figure></div><div class="arrival-tools"><div class="card" style="margin-top:18px">
+<div class="eyebrow">Your address</div><div class="big" style="margin-top:5px">Vicolo Scanderbeg 43</div>
+<div class="muted">00187 Roma, Italy · Trevi</div>
+<div class="actions" style="margin-top:14px"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&amp;query=Vicolo+Scanderbeg+43+00187+Roma" rel="noopener" target="_blank">Open in Google Maps</a><button class="btn" id="copy">Copy address</button></div>
+<div aria-live="polite" class="muted" id="copied" style="font-size:12px;margin-top:6px"></div>
+</div>
+<div class="card" style="margin-top:12px"><div class="eyebrow">Wi-Fi · Make yourself at home</div><div class="grid mobile2" style="margin-top:10px"><div><span class="muted">Network</span><br><b style="font-size:19px">Domus Fontane</b></div><div><span class="muted">Password</span><br><b style="font-size:19px">Fontane43</b></div></div><button class="btn" id="copywifi" style="margin-top:14px">Copy Wi-Fi password</button><div class="muted" id="wificopied" style="font-size:12px;margin-top:6px"></div></div></div></header><div class="home-weather-dock"><div class="guide-chapter-heading"><h2>Your stay, chapter by chapter.</h2><p>Choose what you need.</p></div><nav aria-label="Guide sections" id="guide-chapters">
+<button aria-label="Open essentials section" class="nav active" aria-current="page" data-page="essentials"><b><svg class="icon" viewbox="0 0 24 24"><path d="M12 3v18M3 12h18M6.5 6.5l11 11M17.5 6.5l-11 11"></path></svg>Home</b><small>At a glance</small></button>
+<button aria-label="Open travel section" class="nav" data-page="travel"><b><svg class="icon" viewbox="0 0 24 24"><path d="M3 11.5l18-7-7 18-2.5-8.5L3 11.5z"></path></svg>Getting Around</b><small>Airport · metro · rail</small></button>
+<button aria-label="Open taxi section" class="nav" data-page="taxi"><b><svg class="icon" viewbox="0 0 24 24"><path d="M5 17h14l-1-7H6l-1 7zM8 10l1-3h6l1 3M7 17v2M17 17v2"></path></svg>Check-in &amp; Keys</b><small>Arrive &amp; enter</small></button>
+<button aria-label="Open house section" class="nav" data-page="house"><b><svg class="icon" viewbox="0 0 24 24"><path d="M3 11l9-7 9 7M6 10v10h12V10M10 20v-6h4v6"></path></svg>House Rules</b><small>My home, with care</small></button>
+<button aria-label="Open guides section" class="nav" data-page="guides"><b><svg class="icon" viewbox="0 0 24 24"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"></path><circle cx="12" cy="10" r="2"></circle></svg>Explore Rome</b><small>Eat · walk · discover</small></button>
+<button aria-label="Open stay section" class="nav" data-page="stay"><b><svg class="icon" viewbox="0 0 24 24"><path d="M12 3v18M5 8h14M7 12h10M9 16h6"></path></svg>The Apartment</b><small>How everything works</small></button><button aria-label="Open checkout section" class="nav" data-page="checkout"><b><svg class="icon" viewbox="0 0 24 24"><path d="M4 4h10v16H4zM14 12h7M18 9l3 3-3 3M8 12h.01"></path></svg>Check-out</b><small>Before you leave</small></button><button aria-label="Open book section" class="nav" data-page="book"><b><svg class="icon" viewbox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"></path></svg>Book Direct</b><small>Come back to Rome</small></button><button aria-label="Open Google review section" class="nav" data-page="checkout" data-anchor="review-cta"><b><svg class="icon" viewbox="0 0 24 24"><path d="M12 3.8l2.5 5.1 5.6.8-4 3.9.9 5.5-5-2.6-5 2.6.9-5.5-4-3.9 5.6-.8L12 3.8z"></path></svg>Review</b><small>Share your stay</small></button><button aria-label="Open help section" class="nav" data-page="help"><b><svg class="icon" viewbox="0 0 24 24"><path d="M7 4l3 4-2 2c1.5 3 3 4.5 6 6l2-2 4 3c-1 3-3 4-5 3C9 18 6 15 4 9 3 7 4 5 7 4z"></path></svg>Help</b><small>Edoardo · emergency</small></button>
+</nav>
+<div class="card" id="rome-weather">
 <div class="eyebrow">Rome today</div>
-<div class="big serif" >Today &amp; tomorrow</div>
+<div class="big serif">Today &amp; tomorrow</div>
 <p aria-live="polite" class="muted" id="weather-status">Loading today and tomorrow’s forecast…</p>
 <div class="grid mobile2" style="margin-top:12px">
 <div class="card" style="box-shadow:none"><div class="eyebrow">Today</div><div class="big" id="weather-today">—</div><div class="muted" id="weather-today-detail">—</div></div>
@@ -777,14 +874,6 @@ details>summary:focus-visible{outline:2px solid var(--brass);outline-offset:-4px
 </div>
 <p class="muted" style="font-size:11px;margin-top:12px">Rome · °C &amp; °F · <a href="https://open-meteo.com/" rel="noopener" target="_blank">Weather data by Open-Meteo</a></p>
 </div>
-<nav aria-label="Guide sections">
-<button aria-label="Open essentials section" class="nav active" aria-current="page" data-page="essentials"><b><svg class="icon" viewbox="0 0 24 24"><path d="M12 3v18M3 12h18M6.5 6.5l11 11M17.5 6.5l-11 11"></path></svg>Home</b><small>At a glance</small></button>
-<button aria-label="Open travel section" class="nav" data-page="travel"><b><svg class="icon" viewbox="0 0 24 24"><path d="M3 11.5l18-7-7 18-2.5-8.5L3 11.5z"></path></svg>Getting Around</b><small>Airport · metro · rail</small></button>
-<button aria-label="Open taxi section" class="nav" data-page="taxi"><b><svg class="icon" viewbox="0 0 24 24"><path d="M5 17h14l-1-7H6l-1 7zM8 10l1-3h6l1 3M7 17v2M17 17v2"></path></svg>Check-in &amp; Keys</b><small>Arrive &amp; enter</small></button>
-<button aria-label="Open house section" class="nav" data-page="house"><b><svg class="icon" viewbox="0 0 24 24"><path d="M3 11l9-7 9 7M6 10v10h12V10M10 20v-6h4v6"></path></svg>House Rules</b><small>My home, with care</small></button>
-<button aria-label="Open guides section" class="nav" data-page="guides"><b><svg class="icon" viewbox="0 0 24 24"><path d="M12 21s7-5.2 7-11a7 7 0 1 0-14 0c0 5.8 7 11 7 11z"></path><circle cx="12" cy="10" r="2"></circle></svg>Explore Rome</b><small>Eat · walk · discover</small></button>
-<button aria-label="Open stay section" class="nav" data-page="stay"><b><svg class="icon" viewbox="0 0 24 24"><path d="M12 3v18M5 8h14M7 12h10M9 16h6"></path></svg>The Apartment</b><small>How everything works</small></button><button aria-label="Open checkout section" class="nav" data-page="checkout"><b><svg class="icon" viewbox="0 0 24 24"><path d="M4 4h10v16H4zM14 12h7M18 9l3 3-3 3M8 12h.01"></path></svg>Check-out</b><small>Before you leave</small></button><button aria-label="Open book section" class="nav" data-page="book"><b><svg class="icon" viewbox="0 0 24 24"><path d="M5 4h14v16H5zM8 8h8M8 12h8M8 16h5"></path></svg>Book Direct</b><small>Come back to Rome</small></button><button aria-label="Open Google review section" class="nav" data-page="checkout" data-anchor="review-cta"><b><svg class="icon" viewBox="0 0 24 24"><path d="M12 3.8l2.5 5.1 5.6.8-4 3.9.9 5.5-5-2.6-5 2.6.9-5.5-4-3.9 5.6-.8L12 3.8z"></path></svg>Review</b><small>Share your stay</small></button><button aria-label="Open help section" class="nav" data-page="help"><b><svg class="icon" viewbox="0 0 24 24"><path d="M7 4l3 4-2 2c1.5 3 3 4.5 6 6l2-2 4 3c-1 3-3 4-5 3C9 18 6 15 4 9 3 7 4 5 7 4z"></path></svg>Help</b><small>Edoardo · emergency</small></button>
-</nav>
 <section class="card" id="rome-today" aria-labelledby="city-title">
 <div class="eyebrow">The city, at a glance</div>
 <h2 id="city-title">Today in Rome</h2>
@@ -803,16 +892,7 @@ details>summary:focus-visible{outline:2px solid var(--brass);outline-offset:-4px
 <p class="city-note">Local markets, traditional <i>sagre</i> and events in Rome and the surrounding area. Listings are in Italian; check the location before travelling.</p>
 </div>
 </section></div>
-<div class="eyebrow">Private digital concierge · Roma</div>
-<h1 class="serif">My Rome<br/><em>Your Home</em></h1>
-<p class="lead">Welcome to my home in the heart of Rome. I made this private guide for you — everything you need for the apartment, getting around, eating well and enjoying the city without wasting time researching.</p>
-<div class="card" style="margin-top:18px">
-<div class="eyebrow">Your address</div><div class="big" style="margin-top:5px">Vicolo Scanderbeg 43</div>
-<div class="muted">00187 Roma, Italy · Trevi</div>
-<div class="actions" style="margin-top:14px"><a class="btn primary" href="https://www.google.com/maps/search/?api=1&amp;query=Vicolo+Scanderbeg+43+00187+Roma" rel="noopener" target="_blank">Open in Google Maps</a><button class="btn" id="copy">Copy address</button></div>
-<div aria-live="polite" class="muted" id="copied" style="font-size:12px;margin-top:6px"></div>
-</div>
-<div class="card" style="margin-top:12px"><div class="eyebrow">Wi-Fi · Make yourself at home</div><div class="grid mobile2" style="margin-top:10px"><div><span class="muted">Network</span><br/><b style="font-size:19px">Domus Fontane</b></div><div><span class="muted">Password</span><br/><b style="font-size:19px">Fontane43</b></div></div><button class="btn" id="copywifi" style="margin-top:14px">Copy Wi-Fi password</button><div class="muted" id="wificopied" style="font-size:12px;margin-top:6px"></div></div></header><div aria-label="Quick guest actions" class="actions" style="margin:14px 0 2px">
+<div aria-label="Quick guest actions" class="actions" style="margin:14px 0 2px">
 
 <a class="btn" href="https://www.google.com/maps/dir/?api=1&amp;destination=Vicolo+Scanderbeg+43,+00187+Roma" rel="noopener" target="_blank">Directions home</a>
 <button class="btn" data-go="checkout">Check-out</button>
